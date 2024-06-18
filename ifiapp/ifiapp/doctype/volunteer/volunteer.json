@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2024-06-18 22:35:29.784459",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "profile_details_section",
+  "full_name",
+  "points_gained",
+  "column_break_gz6cl",
+  "user_link",
+  "students_list_section",
+  "students_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "user_link",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "points_gained",
+   "fieldtype": "Data",
+   "label": "Points"
+  },
+  {
+   "fieldname": "students_list",
+   "fieldtype": "Table",
+   "label": "List of Students",
+   "options": "Students"
+  },
+  {
+   "fieldname": "column_break_gz6cl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "students_list_section",
+   "fieldtype": "Section Break",
+   "label": "Students List"
+  },
+  {
+   "fieldname": "profile_details_section",
+   "fieldtype": "Section Break",
+   "label": "Profile details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-18 22:59:15.264555",
+ "modified_by": "Administrator",
+ "module": "IFIApp",
+ "name": "Volunteer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

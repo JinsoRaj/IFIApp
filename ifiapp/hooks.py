@@ -213,3 +213,7 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"ifiapp.auth.validate"
 # ]
+
+fixtures = [{
+  'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','Quality Assurance'))}
+}]
