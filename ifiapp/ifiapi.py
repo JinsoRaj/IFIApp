@@ -88,8 +88,8 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 
 	#print(frappe.local.response)
 	#remove the not found execption from user.insert(). idk why
-	if frappe.local.response["exc_type"] == "DoesNotExistError":
-		frappe.local.response.pop("exc_type")
+	#if frappe.local.response["exc_type"] == "DoesNotExistError":
+		#frappe.local.response.pop("exc_type")
 
 	#send code to user via mail
 	send_email(email,number_code)
