@@ -73,8 +73,8 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	user.flags.ignore_permissions = True
 	user.flags.ignore_password_policy = True
 	#send a mail
-	#generate 4 digit key
-	number_code = random.randint(1000,9999)
+	#generate 6 digit key
+	number_code = random.randint(100000,999999)
 	#store key in reset_password_key
 	user.db_set("reset_password_key", number_code)
 
@@ -127,6 +127,24 @@ def verify_mail(email: str, number_code: str):
 	 
 	#key = user.reset_password_key
 	return 0, "Mail not verified"
+
+#resend verification OTP
+@frappe.whitelist(allow_guest=True)
+def resend_mail(email: str):
+	user = frappe.get_doc("User", email)
+	user.flags.ignore_permissions = True
+	#generate 6 digit key
+	number_code = random.randint(100000,999999)
+	#store key in reset_password_key
+	user.reset_password_key = number_code
+	#store time of generation in last_reset_password_key_generated_on
+	current_datetime = now_datetime()
+	user.last_reset_password_key_generated_on = current_datetime
+	user.save()
+	frappe.db.commit()
+	send_email(email,number_code)
+
+	return 1, "Generated a new code"
 
 @frappe.whitelist(allow_guest = True)
 def app_login(usr,pwd):
