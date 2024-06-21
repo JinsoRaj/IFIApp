@@ -100,9 +100,9 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	#send code to user via mail
 	send_email(email,number_code)
 	# set default signup role as per Portal Settings
-	#default_role = frappe.db.get_single_value("Portal Settings", "default_role")
-	#if default_role:
-		#user.add_roles(default_role)
+	default_role = frappe.db.get_single_value("Portal Settings", "default_role")
+	if default_role:
+		user.add_roles(default_role)
 	return {
 		"status": 1,
 		"message_text": "Created user"
