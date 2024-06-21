@@ -38,7 +38,7 @@ def send_email(email_address,number_code):
 
 #signup function - used to register the user in backend. bydefault the user is disabled and wont be able to login. Once the email is verified, the user is enabled and allowed to login.
 @frappe.whitelist(allow_guest=True)
-def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tuple[int, str]:
+def sign_up(email: str, password: str, full_name: str, redirect_to: str):
 	# if signup is disabled from website settings
 	if is_signup_disabled():
 		frappe.throw(("Sign Up is disabled"), title=("Not Allowed"))
@@ -93,15 +93,15 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	#create disabled user 
 
 	user.insert()
-	frappe.db.commit()
+	#frappe.db.commit()
 
 	send_email(email,number_code)
 
 	# disable noti settings
-	noti = frappe.get_doc("Notification Settings", email)
-	noti.enabled = 0
-	noti.save()
-	frappe.db.commit()
+	#noti = frappe.get_doc("Notification Settings", email)
+	#noti.enabled = 0
+	#noti.save()
+	#frappe.db.commit()
 	#add write role for guest in desk
 
 	#print(frappe.local.response)
