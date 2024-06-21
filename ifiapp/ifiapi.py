@@ -98,10 +98,11 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str):
 	send_email(email,number_code)
 
 	# disable noti settings
-	#noti = frappe.get_doc("Notification Settings", email)
-	#noti.enabled = 0
-	#noti.save()
-	#frappe.db.commit()
+	noti = frappe.get_doc("Notification Settings", email)
+	noti.enabled = 0
+	noti.flags.ignore_permissions = True
+	noti.save()
+	frappe.db.commit()
 	#add write role for guest in desk
 
 	#print(frappe.local.response)
