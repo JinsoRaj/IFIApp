@@ -93,7 +93,7 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str):
 	#create disabled user 
 
 	user.insert()
-	#frappe.db.commit()
+	frappe.db.commit()
 
 	send_email(email,number_code)
 
