@@ -87,7 +87,7 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	#store time of generation in last_reset_password_key_generated_on
 	current_datetime = now_datetime()
 	user.db_set("last_reset_password_key_generated_on", current_datetime)
-	user.role_profile_name = "ifi"
+	#user.role_profile_name = "ifi"
 	#store the time limit in reset_password_link_expiry system settings = 30min
 	
 	#create disabled user 
