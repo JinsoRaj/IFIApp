@@ -87,10 +87,20 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	#store time of generation in last_reset_password_key_generated_on
 	current_datetime = now_datetime()
 	user.db_set("last_reset_password_key_generated_on", current_datetime)
+	user.role_profile_name = "ifi"
 	#store the time limit in reset_password_link_expiry system settings = 30min
 	
 	#create disabled user 
+
 	user.insert()
+	frappe.db.commit()
+
+	# disable noti settings
+	noti = frappe.get_doc("Notification Settings", email)
+	noti.enabled = 0
+	noti.save()
+	frappe.db.commit()
+	#add write role for guest in desk
 
 	#print(frappe.local.response)
 	#remove the not found execption from user.insert(). idk why
@@ -100,9 +110,9 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	#send code to user via mail
 	send_email(email,number_code)
 	# set default signup role as per Portal Settings
-	default_role = frappe.db.get_single_value("Portal Settings", "default_role")
-	if default_role:
-		user.add_roles(default_role)
+	#default_role = frappe.db.get_single_value("Portal Settings", "default_role")
+	#if default_role:
+		#user.add_roles(default_role)
 	return {
 		"status": 1,
 		"message_text": "Created user"
@@ -156,7 +166,7 @@ def resend_mail(email: str):
 	user.last_reset_password_key_generated_on = current_datetime
 	user.save()
 	frappe.db.commit()
-	#send_email(email,number_code)
+	send_email(email,number_code)
 
 	return {
 	"status": 1,
