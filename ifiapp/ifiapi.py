@@ -95,6 +95,8 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	user.insert()
 	frappe.db.commit()
 
+	send_email(email,number_code)
+
 	# disable noti settings
 	noti = frappe.get_doc("Notification Settings", email)
 	noti.enabled = 0
@@ -108,7 +110,7 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 		#frappe.local.response.pop("exc_type")
 
 	#send code to user via mail
-	send_email(email,number_code)
+	
 	# set default signup role as per Portal Settings
 	#default_role = frappe.db.get_single_value("Portal Settings", "default_role")
 	#if default_role:
