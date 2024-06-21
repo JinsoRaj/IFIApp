@@ -46,9 +46,15 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	user = frappe.db.get("User", {"email": email})
 	if user:
 		if user.enabled:
-			return 0, ("Already Registered")
+			return {
+				"status": 0,
+				"message_text": "Already Registered"
+				}
 		else:
-			return 0, ("Registered but disabled")
+			return {
+				"status": 0,
+				"message_text": "Registered but disabled"
+				}
 	else:
 		if frappe.db.get_creation_count("User", 60) > 300:
 			frappe.respond_as_web_page(
@@ -97,8 +103,10 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str) -> tupl
 	#default_role = frappe.db.get_single_value("Portal Settings", "default_role")
 	#if default_role:
 		#user.add_roles(default_role)
-		
-	return 1, "Created user"
+	return {
+		"status": 1,
+		"message_text": "Created user"
+		}
 
 @frappe.whitelist(allow_guest=True)
 def verify_mail(email: str, number_code: str):
@@ -126,7 +134,10 @@ def verify_mail(email: str, number_code: str):
 	#user.last_name = "nys"
 	 
 	#key = user.reset_password_key
-	return 0, "Mail not verified"
+	return {
+	"status": 0,
+	"message_text": "Mail is not verified"
+	}
 
 #resend verification OTP
 @frappe.whitelist(allow_guest=True)
@@ -142,9 +153,13 @@ def resend_mail(email: str):
 	user.last_reset_password_key_generated_on = current_datetime
 	user.save()
 	frappe.db.commit()
-	send_email(email,number_code)
+	#send_email(email,number_code)
 
-	return 1, "Generated a new code"
+	return {
+	"status": 1,
+    "message_text": "Generated a new code."
+  }
+
 
 @frappe.whitelist(allow_guest = True)
 def app_login(usr,pwd):
