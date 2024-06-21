@@ -129,7 +129,10 @@ def verify_mail(email: str, number_code: str):
 			user.enabled = 1
 			user.save()
 			frappe.db.commit()
-			return 1, "Verified"
+			return {
+				"status": 1,
+				"message_text": "Verified"
+				}
 	#user.reset_password_key = number_code
 	#user.last_name = "nys"
 	 
