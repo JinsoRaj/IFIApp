@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_rkxo",
+  "profile_pic",
   "full_name",
   "state",
   "district",
@@ -81,11 +82,16 @@
   {
    "fieldname": "column_break_txvg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "profile_pic",
+   "fieldtype": "Data",
+   "label": "Profile picture"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-21 00:55:12.530648",
+ "modified": "2024-06-22 12:34:54.457741",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "UserSignups",
