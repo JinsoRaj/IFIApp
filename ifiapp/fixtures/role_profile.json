@@ -1,0 +1,17 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-06-22 15:50:14.284065",
+  "name": "ifi",
+  "role_profile": "ifi",
+  "roles": [
+   {
+    "parent": "ifi",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "ifiuser"
+   }
+  ]
+ }
+]

@@ -215,5 +215,6 @@ app_license = "MIT"
 # ]
 
 fixtures = [{
-  'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','Quality Assurance'))}
+  'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','Quality Assurance','ifiuser'))},
+  'dt': 'Role Profile', 'filters': {'name': ('in', ('ifi'))}
 }]

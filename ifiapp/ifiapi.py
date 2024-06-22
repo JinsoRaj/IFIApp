@@ -87,6 +87,7 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str):
 	#store time of generation in last_reset_password_key_generated_on
 	current_datetime = now_datetime()
 	user.db_set("last_reset_password_key_generated_on", current_datetime)
+	#user.db_set("role_profile_name","ifi")
 	#user.role_profile_name = "ifi"
 	#store the time limit in reset_password_link_expiry system settings = 30min
 	
@@ -138,10 +139,18 @@ def verify_mail(email: str, number_code: str):
 	#expired when - now_datetime() > last_reset_password_key_generated_on + timedelta(seconds=reset_password_link_expiry)
 	#if not expired - then match usercode with stored key, if same enable the user and save.
 	if now_datetime() < last_reset_password_key_generated_on + timedelta(seconds=reset_password_link_expiry):
+		noti = frappe.get_doc("Notification Settings", email)
+		noti.enabled = 1
+		noti.flags.ignore_permissions = True
+		noti.save()
+		frappe.db.commit()
+		
 		if number_code == stored_code:
 			user.enabled = 1
+			user.role_profile_name = "ifi"
 			user.save()
 			frappe.db.commit()
+
 			return {
 				"status": 1,
 				"message_text": "Verified"
