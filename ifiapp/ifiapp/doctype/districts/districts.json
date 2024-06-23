@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:district_name",
  "creation": "2024-06-24 00:58:13.755938",
@@ -30,7 +31,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-24 01:09:18.919463",
+ "modified": "2024-06-24 01:16:26.069389",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Districts",
