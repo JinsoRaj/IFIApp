@@ -30,7 +30,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-24 01:01:41.029094",
+ "modified": "2024-06-24 01:09:18.919463",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Districts",
@@ -46,6 +46,17 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ifiuser",
    "share": 1,
    "write": 1
   }
