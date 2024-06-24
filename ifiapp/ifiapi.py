@@ -195,6 +195,7 @@ def app_login(usr,pwd):
 		user = login_manager.user
 		frappe.response['key_details'] = generate_key(user)
 		frappe.response['user_details'] = get_user_details(user)
+		frappe.response['profile_form'] = get_profile_form(user)
 	else:
 		return False
 	
@@ -216,3 +217,17 @@ def get_user_details(user):
 	user_details = frappe.get_all("User",filters={"name":user},fields=["name","first_name","last_name","email","mobile_no","gender","role_profile_name"])
 	if user_details:
 		return user_details
+	
+def get_profile_form(user):
+	try:
+		profile_form = frappe.get_doc("UserSignups", user)
+		if profile_form:
+			return {
+				"status": 1,
+				"message_text": "Profile details added"
+				}
+	except:
+		return {
+			"status": 0,
+			"message_text": "Profile details not found"
+			}
