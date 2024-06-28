@@ -223,11 +223,9 @@ def get_profile_form(user):
 		profile_form = frappe.get_doc("UserSignups", user)
 		if profile_form:
 			return {
-				"status": 1,
-				"message_text": "Profile details added"
+				"details": True
 				}
 	except:
 		return {
-			"status": 0,
-			"message_text": "Profile details not found"
+			"details": False
 			}
