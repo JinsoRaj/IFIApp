@@ -214,7 +214,7 @@ def generate_key(user):
 	return {"api_secret": api_secret,"api_key": api_key}
 
 def get_user_details(user):
-	user_details = frappe.get_all("User",filters={"name":user},fields=["name","first_name","last_name","email","mobile_no","gender","role_profile_name"])
+	user_details = frappe.get_all("User",filters={"name":user},fields=["name","first_name","last_name","email","mobile_no","gender","role_profile_name","roles"])
 	if user_details:
 		return user_details
 	
