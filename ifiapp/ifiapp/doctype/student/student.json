@@ -10,7 +10,14 @@
  "field_order": [
   "full_name",
   "school_name",
-  "class"
+  "school_district",
+  "class",
+  "grade",
+  "gender",
+  "contact_number",
+  "english_level",
+  "maths_level",
+  "skills"
  ],
  "fields": [
   {
@@ -28,11 +35,47 @@
    "fieldname": "class",
    "fieldtype": "Data",
    "label": "Class"
+  },
+  {
+   "fieldname": "school_district",
+   "fieldtype": "Data",
+   "label": "School district"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "label": " Contact Number"
+  },
+  {
+   "fieldname": "english_level",
+   "fieldtype": "Data",
+   "label": "English Level"
+  },
+  {
+   "fieldname": "maths_level",
+   "fieldtype": "Data",
+   "label": "Maths Level"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Data",
+   "label": "Skills"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-18 23:00:02.257997",
+ "modified": "2024-07-06 07:54:41.857444",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",

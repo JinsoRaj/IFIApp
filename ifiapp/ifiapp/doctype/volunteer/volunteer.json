@@ -10,6 +10,7 @@
  "field_order": [
   "profile_details_section",
   "full_name",
+  "district",
   "points_gained",
   "column_break_gz6cl",
   "user_link",
@@ -53,11 +54,16 @@
    "fieldname": "profile_details_section",
    "fieldtype": "Section Break",
    "label": "Profile details"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "Work or College District"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-18 22:59:15.264555",
+ "modified": "2024-07-06 08:42:23.478310",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Volunteer",
