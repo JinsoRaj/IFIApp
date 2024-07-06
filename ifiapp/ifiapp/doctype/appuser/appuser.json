@@ -2,22 +2,27 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:full_name",
- "creation": "2024-06-18 22:35:29.784459",
- "default_view": "List",
+ "creation": "2024-07-06 23:26:49.044618",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "profile_details_section",
+  "section_break_95kj",
   "full_name",
-  "district",
+  "is_volunteer",
+  "is_coordinator",
+  "is_qa",
+  "column_break_7exv",
+  "user_details",
   "points_gained",
-  "column_break_gz6cl",
-  "user_link",
   "students_list_section",
   "students_list"
  ],
  "fields": [
+  {
+   "fieldname": "section_break_95kj",
+   "fieldtype": "Section Break",
+   "label": "User Data"
+  },
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
@@ -25,24 +30,12 @@
    "unique": 1
   },
   {
-   "fieldname": "user_link",
-   "fieldtype": "Link",
-   "label": "User",
-   "options": "User"
-  },
-  {
    "fieldname": "points_gained",
    "fieldtype": "Data",
    "label": "Points"
   },
   {
-   "fieldname": "students_list",
-   "fieldtype": "Table",
-   "label": "List of Students",
-   "options": "Students"
-  },
-  {
-   "fieldname": "column_break_gz6cl",
+   "fieldname": "column_break_7exv",
    "fieldtype": "Column Break"
   },
   {
@@ -51,22 +44,43 @@
    "label": "Students List"
   },
   {
-   "fieldname": "profile_details_section",
-   "fieldtype": "Section Break",
-   "label": "Profile details"
+   "depends_on": "eval:doc.is_volunteer == 1",
+   "fieldname": "students_list",
+   "fieldtype": "Table",
+   "label": "List of Students",
+   "options": "Students"
   },
   {
-   "fieldname": "district",
-   "fieldtype": "Data",
-   "label": "Work or College District"
+   "default": "0",
+   "fieldname": "is_volunteer",
+   "fieldtype": "Check",
+   "label": "Is Volunteer"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_qa",
+   "fieldtype": "Check",
+   "label": "Is QA"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_coordinator",
+   "fieldtype": "Check",
+   "label": "Is Co ordinator"
+  },
+  {
+   "fieldname": "user_details",
+   "fieldtype": "Link",
+   "label": "Details",
+   "options": "UserSignups"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-06 08:42:23.478310",
+ "modified": "2024-07-07 01:44:40.755348",
  "modified_by": "Administrator",
  "module": "IFIApp",
- "name": "Volunteer",
+ "name": "AppUser",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -85,6 +99,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
