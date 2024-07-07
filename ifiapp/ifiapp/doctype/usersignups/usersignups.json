@@ -18,7 +18,8 @@
   "column_break_txvg",
   "email_id",
   "ph_number",
-  "res_address"
+  "res_address",
+  "is_approved"
  ],
  "fields": [
   {
@@ -52,6 +53,7 @@
    "label": "State"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "district",
    "fieldtype": "Data",
    "label": "District"
@@ -89,11 +91,17 @@
    "fieldname": "profile_pic",
    "fieldtype": "Data",
    "label": "Profile picture"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_approved",
+   "fieldtype": "Check",
+   "label": "is Approved"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-25 00:24:17.712157",
+ "modified": "2024-07-08 00:34:42.628578",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "UserSignups",
@@ -126,5 +134,18 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Pink",
+   "title": "Approval Pending"
+  },
+  {
+   "color": "Green",
+   "title": "Approved"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ]
 }
