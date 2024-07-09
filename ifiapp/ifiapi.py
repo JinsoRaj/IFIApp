@@ -221,13 +221,30 @@ def get_user_details(user):
 		return user_details
 	
 def get_profile_form(user):
-	try:
-		profile_form = frappe.get_doc("UserSignups", user)
-		if profile_form:
-			return {
-				"details": True
-				}
-	except:
-		return {
-			"details": False
+	# try:
+	# 	profile_form = frappe.get_doc("UserSignups", user)
+	# 	if profile_form:
+	# 		return {
+	# 			"details": True
+	# 			}
+	# except:
+	# 	return {
+	# 		"details": False
+	# 		}
+	#new code
+	if frappe.db.exists("UserSignups", user):
+		if frappe.db.exists("AppUser", user):
+			return{
+				"details": True,
+				"approved": True
+			}
+		else:
+			return{
+				"details": True,
+				"approved": False
+			}
+	else:
+		return{
+				"details": False,
+				"approved": False
 			}

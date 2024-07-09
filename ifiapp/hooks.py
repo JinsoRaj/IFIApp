@@ -219,3 +219,10 @@ fixtures = [{
   'dt': 'Role Profile', 'filters': {'name': ('in', ('ifi'))},
   'dt': 'Workflow', 'filters': {'name': ('in', ('UserApproval'))}
 }]
+
+
+doc_events = {
+    "UserSignups": {
+        "on_update": "ifiapp.ifiapp.doctype.appuser.appuser.add_as_appuser"
+    }
+}
