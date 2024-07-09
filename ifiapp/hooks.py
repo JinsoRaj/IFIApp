@@ -224,5 +224,8 @@ fixtures = [{
 doc_events = {
     "UserSignups": {
         "on_update": "ifiapp.ifiapp.doctype.appuser.appuser.add_as_appuser"
-    }
+    },
+    "User": {
+        "on_update": "ifiapp.ifiapp.doctype.appuser.appuser.add_roles_in_appuser"
+	}
 }
