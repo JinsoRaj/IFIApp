@@ -43,27 +43,28 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str):
 	if is_signup_disabled():
 		frappe.throw(("Sign Up is disabled"), title=("Not Allowed"))
 
-	user = frappe.db.get("User", {"email": email})
-	if user:
-		if user.enabled:
-			return {
-				"status": 0,
-				"message_text": "Already Registered"
-				}
+	if frappe.db.exists("User", {"email": email}):
+		user = frappe.db.get("User", {"email": email})
+		if user:
+			if user.enabled:
+				return {
+					"status": 0,
+					"message_text": "Already Registered"
+					}
+			else:
+				return {
+					"status": 0,
+					"message_text": "Registered but disabled"
+					}
 		else:
-			return {
-				"status": 0,
-				"message_text": "Registered but disabled"
-				}
-	else:
-		if frappe.db.get_creation_count("User", 60) > 300:
-			frappe.respond_as_web_page(
-						("Temporarily Disabled"),
-						(
-							"Too many users signed up recently, so the registration is disabled. Please try back in an hour"
-						),
-						http_status_code=429,
-					)
+			if frappe.db.get_creation_count("User", 60) > 300:
+				frappe.respond_as_web_page(
+							("Temporarily Disabled"),
+							(
+								"Too many users signed up recently, so the registration is disabled. Please try back in an hour"
+							),
+							http_status_code=429,
+						)
 		
 	user = frappe.get_doc(
 		{
@@ -99,11 +100,12 @@ def sign_up(email: str, password: str, full_name: str, redirect_to: str):
 	send_email(email,number_code)
 
 	# disable noti settings
-	noti = frappe.get_doc("Notification Settings", email)
-	noti.enabled = 0
-	noti.flags.ignore_permissions = True
-	noti.save()
-	frappe.db.commit()
+	if frappe.db.exists("Notification Settings", email):
+		noti = frappe.get_doc("Notification Settings", email)
+		noti.enabled = 0
+		noti.flags.ignore_permissions = True
+		noti.save()
+		frappe.db.commit()
 	#add write role for guest in desk
 
 	#print(frappe.local.response)
@@ -147,7 +149,8 @@ def verify_mail(email: str, number_code: str):
 		
 		if number_code == stored_code:
 			user.enabled = 1
-			user.role_profile_name = "ifi"
+			#user.role_profile_name = "ifi"
+			user.add_roles("ifiuser")
 			user.save()
 			frappe.db.commit()
 
@@ -214,24 +217,14 @@ def generate_key(user):
 	return {"api_secret": api_secret,"api_key": api_key}
 
 def get_user_details(user):
-	user_details = frappe.get_all("User",filters={"name":user},fields=["name","first_name","last_name","email","mobile_no","gender","role_profile_name"])
+	user_details = frappe.get_all("User",filters={"name":user},fields=["name","first_name","last_name","email","mobile_no","gender"])
 	if user_details:
 		user_roles = frappe.get_roles(user)
 		user_details[0]["user_roles"] = user_roles
 		return user_details
 	
 def get_profile_form(user):
-	# try:
-	# 	profile_form = frappe.get_doc("UserSignups", user)
-	# 	if profile_form:
-	# 		return {
-	# 			"details": True
-	# 			}
-	# except:
-	# 	return {
-	# 		"details": False
-	# 		}
-	#new code
+	#usersignup means user applied with details, appuser means approved users.
 	if frappe.db.exists("UserSignups", user):
 		if frappe.db.exists("AppUser", user):
 			return{
