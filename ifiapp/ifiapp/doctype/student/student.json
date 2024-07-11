@@ -17,7 +17,8 @@
   "contact_number",
   "english_level",
   "maths_level",
-  "skills"
+  "skills",
+  "total_attendance"
  ],
  "fields": [
   {
@@ -71,11 +72,16 @@
    "fieldname": "skills",
    "fieldtype": "Data",
    "label": "Skills"
+  },
+  {
+   "fieldname": "total_attendance",
+   "fieldtype": "Data",
+   "label": "Attendance so far"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-11 23:59:28.017925",
+ "modified": "2024-07-12 01:20:43.144426",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",
