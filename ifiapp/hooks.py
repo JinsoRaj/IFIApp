@@ -228,5 +228,9 @@ doc_events = {
     },
     "User": {
         "on_update": "ifiapp.ifiapp.doctype.appuser.appuser.add_roles_in_appuser"
-	}
+    },
+    "Attendance":{
+        # "after_insert": "ifiapp.ifiapp.doctype.student.student.change_total_attendance",
+        "on_update": "ifiapp.ifiapp.doctype.student.student.change_total_attendance"
+    }
 }

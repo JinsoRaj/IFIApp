@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:student_name",
+ "autoname": "format:ATT-{student_id}-{date}",
  "creation": "2024-07-12 01:14:32.634881",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -20,12 +20,13 @@
    "fieldtype": "Section Break"
   },
   {
+   "fetch_from": "student_id.full_name",
    "fieldname": "student_name",
    "fieldtype": "Data",
-   "label": "Student Name",
-   "unique": 1
+   "label": "Student Name"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
@@ -44,8 +45,9 @@
   },
   {
    "fieldname": "student_id",
-   "fieldtype": "Data",
-   "label": "Student ID"
+   "fieldtype": "Link",
+   "label": "Student ID",
+   "options": "Student"
   },
   {
    "fieldname": "column_break_dflc",
@@ -54,11 +56,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-12 01:20:01.434757",
+ "modified": "2024-07-13 17:58:49.219879",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Attendance",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -88,5 +90,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "student_name"
 }

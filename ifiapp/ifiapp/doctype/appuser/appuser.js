@@ -7,6 +7,7 @@
 // 	},
 // });
 
+//todo fix?
 frappe.ui.form.on('AppUser', {
 	user_details: function(frm) {
         //get details of selected volunteer user

@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:full_name",
+ "autoname": "naming_series:",
  "creation": "2024-06-18 22:43:35.668015",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "full_name",
   "school_name",
   "school_district",
@@ -77,15 +78,23 @@
    "fieldname": "total_attendance",
    "fieldtype": "Data",
    "label": "Attendance so far"
+  },
+  {
+   "default": "STUD-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "STUD-.YYYY.-"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-12 01:20:43.144426",
+ "modified": "2024-07-13 00:55:48.805664",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -123,8 +132,10 @@
    "write": 1
   }
  ],
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "full_name",
  "track_changes": 1
 }
