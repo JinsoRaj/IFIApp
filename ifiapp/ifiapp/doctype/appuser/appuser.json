@@ -7,13 +7,19 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_95kj",
+  "profile_pic",
   "full_name",
+  "ph_number",
+  "gender",
+  "points_gained",
   "is_volunteer",
   "is_coordinator",
   "is_qa",
   "column_break_7exv",
+  "state",
+  "district",
   "user_details",
-  "points_gained",
+  "res_address",
   "students_list_section",
   "students_list"
  ],
@@ -74,11 +80,43 @@
    "label": "Details",
    "options": "UserSignups",
    "unique": 1
+  },
+  {
+   "fieldname": "profile_pic",
+   "fieldtype": "Data",
+   "label": "Profile picture"
+  },
+  {
+   "fieldname": "ph_number",
+   "fieldtype": "Data",
+   "label": "Phone number"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "District"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther"
+  },
+  {
+   "fieldname": "res_address",
+   "fieldtype": "Long Text",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-10 00:59:09.179005",
+ "modified": "2024-07-17 00:46:08.009610",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",
@@ -109,7 +147,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_name"
 }
