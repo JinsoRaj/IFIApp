@@ -40,8 +40,9 @@
   },
   {
    "fieldname": "school_district",
-   "fieldtype": "Data",
-   "label": "School district"
+   "fieldtype": "Link",
+   "label": "School district",
+   "options": "Districts"
   },
   {
    "fieldname": "grade",
@@ -90,7 +91,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-13 00:55:48.805664",
+ "modified": "2024-07-16 23:33:08.884211",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",

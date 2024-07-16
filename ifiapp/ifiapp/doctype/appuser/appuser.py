@@ -18,6 +18,16 @@ def add_as_appuser(doc, method):
 			app_user.user_details = doc.name
 			app_user.insert(ignore_permissions=True)
 
+			# create user permission for those approved users in District list
+			frappe.get_doc(
+			doctype="User Permission",
+			user=doc.name,
+			allow="Districts",
+			for_value=doc.district,
+			is_default=0,
+			apply_to_all_doctypes=1,
+		).insert(ignore_permissions=True)
+
 
 # update the changes in User roles to appuser roles
 def add_roles_in_appuser(doc, method):
