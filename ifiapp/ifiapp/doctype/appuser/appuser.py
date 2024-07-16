@@ -14,8 +14,15 @@ def add_as_appuser(doc, method):
 	if doc.workflow_state == "Approved":
 		if not frappe.db.exists("AppUser", doc.name):
 			app_user = frappe.new_doc("AppUser")
+			app_user.profile_pic = doc.profile_pic
 			app_user.full_name = doc.full_name
+			app_user.ph_number = doc.ph_number
 			app_user.user_details = doc.name
+			app_user.gender = doc.gender
+			app_user.state = doc.state
+			app_user.district = doc.district
+			app_user.district = doc.district
+			app_user.res_address = doc.res_address
 			app_user.insert(ignore_permissions=True)
 
 			# create user permission for those approved users in District list
