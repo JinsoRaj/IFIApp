@@ -36,5 +36,11 @@ frappe.ui.form.on('AppUser', {
 		// 		}
 		// 	};
 		// });
-	}
+	},
+    refresh: function(frm) {
+        var full_name = frm.doc.full_name
+        var user_link = `/app/user/${frm.doc.name}`
+        frm.set_intro(__("To assign roles to {0}, <a href='{1}'> Click here </a>  and change roles of this User from 2nd Tab:    <a href='{1}'>ROLES</a>", [full_name, user_link]), "green");
+    }
 });
+

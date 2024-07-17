@@ -15,6 +15,7 @@
   "is_volunteer",
   "is_coordinator",
   "is_qa",
+  "roles_info_text",
   "column_break_7exv",
   "state",
   "district",
@@ -60,19 +61,22 @@
    "default": "0",
    "fieldname": "is_volunteer",
    "fieldtype": "Check",
-   "label": "Is Volunteer"
+   "label": "Is Volunteer",
+   "read_only": 1
   },
   {
    "default": "0",
    "fieldname": "is_qa",
    "fieldtype": "Check",
-   "label": "Is QA"
+   "label": "Is QA",
+   "read_only": 1
   },
   {
    "default": "0",
    "fieldname": "is_coordinator",
    "fieldtype": "Check",
-   "label": "Is Co ordinator"
+   "label": "Is Co ordinator",
+   "read_only": 1
   },
   {
    "fieldname": "user_details",
@@ -112,11 +116,17 @@
    "fieldname": "res_address",
    "fieldtype": "Long Text",
    "label": "Address"
+  },
+  {
+   "fieldname": "roles_info_text",
+   "fieldtype": "HTML",
+   "label": "roles info",
+   "options": "<p class=\"alert alert-info\">Edit the roles from <a href=\"/app/user/{{cur_frm.doc.name}}\">User list</a> if you want to modify the roles</p>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-17 00:46:08.009610",
+ "modified": "2024-07-17 17:17:21.598255",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",
