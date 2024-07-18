@@ -1,12 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:student",
  "creation": "2024-06-18 22:41:52.869778",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "student"
+  "student",
+  "school",
+  "class"
  ],
  "fields": [
   {
@@ -14,16 +17,32 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Student",
-   "options": "Student"
+   "options": "Student",
+   "unique": 1
+  },
+  {
+   "fetch_from": "student.school_name",
+   "fieldname": "school",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "School"
+  },
+  {
+   "fetch_from": "student.class",
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-06-18 22:46:13.596767",
+ "modified": "2024-07-19 01:00:53.513450",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Students",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
