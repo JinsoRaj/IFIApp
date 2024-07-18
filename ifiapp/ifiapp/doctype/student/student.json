@@ -30,8 +30,9 @@
   },
   {
    "fieldname": "school_name",
-   "fieldtype": "Data",
-   "label": "School"
+   "fieldtype": "Link",
+   "label": "School",
+   "options": "School"
   },
   {
    "fieldname": "class",
@@ -91,7 +92,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-16 23:33:08.884211",
+ "modified": "2024-07-19 02:07:09.118592",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",
