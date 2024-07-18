@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "student",
+  "full_name",
   "school",
   "class"
  ],
@@ -16,7 +17,7 @@
    "fieldname": "student",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Student",
+   "label": "Student Id",
    "options": "Student",
    "unique": 1
   },
@@ -33,12 +34,19 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Class"
+  },
+  {
+   "fetch_from": "student.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-07-19 01:00:53.513450",
+ "modified": "2024-07-19 01:46:49.806251",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Students",
