@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:class_name",
  "creation": "2024-07-20 23:46:00.579786",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -16,15 +17,17 @@
   {
    "fieldname": "class_name",
    "fieldtype": "Data",
-   "label": "Class Name"
+   "label": "Class Name",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-20 23:50:44.647299",
+ "modified": "2024-07-21 01:10:46.315703",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Class",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

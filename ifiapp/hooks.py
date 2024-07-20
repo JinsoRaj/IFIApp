@@ -218,7 +218,8 @@ fixtures = [{
   'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','Quality Assurance','ifiuser'))},
   'dt': 'Role Profile', 'filters': {'name': ('in', ('ifi'))},
   'dt': 'Workflow', 'filters': {'name': ('in', ('UserApproval'))},
-  'dt': 'Workflow State', 'filters': {'name': ('in', ('Draft', 'Approval Pending'))}
+  'dt': 'Workflow State', 'filters': {'name': ('in', ('Draft', 'Approval Pending'))},
+  'dt': 'Class', 'filters': {'name': ('in', ('6', '7', '8', '9', '10'))}
 }]
 
 
