@@ -4,6 +4,7 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
+import random
 
 
 class AppUser(Document):
@@ -23,6 +24,8 @@ def add_as_appuser(doc, method):
 			app_user.district = doc.district
 			app_user.district = doc.district
 			app_user.res_address = doc.res_address
+			random_number = random.randint(100000, 999999)
+			app_user.ifi_id = f"IFI-{random_number}"
 			app_user.insert(ignore_permissions=True)
 
 			# create user permission for those approved users in District list

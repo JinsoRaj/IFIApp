@@ -9,38 +9,39 @@
 
 //todo fix?
 frappe.ui.form.on('AppUser', {
-	user_details: function(frm) {
+	// district: function(frm) {
+        
         //get details of selected volunteer user
-        frappe.db.get_value("UserSignups", {"name": frm.doc.user_details}, ["district"])
-        .then(response => {
-            var district = response.message.district;
-            //console.log(district);
-            //limit the students list from same district
-            frm.set_query("student","students_list", function() {
-                return {
-                    "filters": {
-                        "school_district": district
-                    }
-                };
-            });
-        })
-        .catch(err => {
-            console.log(err);
-        });
+        // frappe.db.get_value("UserSignups", {"name": frm.doc.user_details}, ["district"])
+        // .then(response => {
+        //     var district = response.message.district;
+        //     //console.log(district);
+        //     //limit the students list from same district
+        //     frm.set_query("student","students_list", function() {
+        //         return {
+        //             "filters": {
+        //                 "school_district": district
+        //             }
+        //         };
+        //     });
+        // })
+        // .catch(err => {
+        //     console.log(err);
+        // });
         
-        
-		// frm.set_query("student","students_list", function() {
-		// 	return {
-		// 		"filters": {
-		// 			"school_district": fl_name
-		// 		}
-		// 	};
-		// });
-	},
-    refresh: function(frm) {
+	// },
+    onload: function(frm) {
         var full_name = frm.doc.full_name
         var user_link = `/app/user/${frm.doc.name}`
         frm.set_intro(__("To assign roles to {0}, <a href='{1}'> Click here </a>  and change roles of this User from 2nd Tab:    <a href='{1}'>ROLES</a>", [full_name, user_link]), "green");
+
+        frm.set_query("student","students_list", function() {
+            return {
+                "filters": {
+                    "school_district": frm.doc.district
+                }
+            };
+        });
     }
 });
 
