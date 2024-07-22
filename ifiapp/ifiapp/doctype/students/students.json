@@ -9,8 +9,9 @@
  "field_order": [
   "student",
   "full_name",
-  "school",
-  "class"
+  "school_name",
+  "class",
+  "grade"
  ],
  "fields": [
   {
@@ -20,13 +21,6 @@
    "label": "Student Id",
    "options": "Student",
    "unique": 1
-  },
-  {
-   "fetch_from": "student.school_name",
-   "fieldname": "school",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "School"
   },
   {
    "fetch_from": "student.class",
@@ -41,12 +35,26 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Student"
+  },
+  {
+   "fetch_from": "student.school_name",
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "School"
+  },
+  {
+   "fetch_from": "student.grade",
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grade"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-07-19 01:46:49.806251",
+ "modified": "2024-07-22 13:13:54.425637",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Students",
