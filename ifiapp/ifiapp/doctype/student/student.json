@@ -59,7 +59,7 @@
   },
   {
    "fieldname": "contact_number",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": " Contact Number"
   },
   {
@@ -93,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-21 01:15:33.122551",
+ "modified": "2024-07-22 11:47:57.522258",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",
