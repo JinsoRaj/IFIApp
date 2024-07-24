@@ -45,3 +45,11 @@ frappe.ui.form.on('AppUser', {
     }
 });
 
+// adding vol id/ifi-id in appuser client side 
+frappe.ui.form.on("Students", {
+    student: function (frm, cdt, cdn) {
+        var student = locals[cdt][cdn];
+        student.vol_id = cur_frm.doc.ifi_id;
+        cur_frm.refresh_field("students_list");
+ }
+});
