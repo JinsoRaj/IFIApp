@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{ifi_id}-{session_start_time}",
  "creation": "2024-07-26 23:18:33.624222",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -63,10 +64,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-27 00:10:54.856714",
+ "modified": "2024-07-27 00:19:43.135051",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "ClassSession",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
