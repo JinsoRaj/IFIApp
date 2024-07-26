@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-26 23:18:33.624222",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_nwgm",
+  "ifi_id",
+  "session_start_time",
+  "session_end_time",
+  "remarks",
+  "attendance_notes",
+  "column_break_mkum",
+  "modules_covered",
+  "topics_covered"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_nwgm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ifi_id",
+   "fieldtype": "Data",
+   "label": "IFI Id"
+  },
+  {
+   "fieldname": "session_start_time",
+   "fieldtype": "Datetime",
+   "label": "Session Start Time"
+  },
+  {
+   "fieldname": "session_end_time",
+   "fieldtype": "Datetime",
+   "label": "Session End Time"
+  },
+  {
+   "fieldname": "topics_covered",
+   "fieldtype": "Long Text",
+   "label": "Topics Covered"
+  },
+  {
+   "fieldname": "modules_covered",
+   "fieldtype": "Select",
+   "label": "Modules Covered",
+   "options": "Maths\nEnglish"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Long Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "attendance_notes",
+   "fieldtype": "Long Text",
+   "label": "Attendance Notes"
+  },
+  {
+   "fieldname": "column_break_mkum",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-27 00:10:54.856714",
+ "modified_by": "Administrator",
+ "module": "IFIApp",
+ "name": "ClassSession",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Volunteer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
