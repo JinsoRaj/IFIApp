@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:topic_name",
+ "creation": "2024-07-27 19:33:18.800222",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zeci",
+  "topic_name",
+  "parent_module"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zeci",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "topic_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Topic Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "parent_module",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Parent Module ",
+   "options": "IFIModule"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-27 19:37:49.325825",
+ "modified_by": "Administrator",
+ "module": "IFIApp",
+ "name": "Topic",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Volunteer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Coordinator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

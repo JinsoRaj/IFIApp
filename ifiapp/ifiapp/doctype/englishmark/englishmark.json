@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-27 21:06:07.766235",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bbc6",
+  "topic",
+  "initial_test_mark",
+  "intermediate_test_mark",
+  "final_test_mark",
+  "average_mark",
+  "grading_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bbc6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Topic",
+   "link_filters": "[[\"Topic\",\"parent_module\",\"=\",\"English\"]]",
+   "options": "Topic"
+  },
+  {
+   "fieldname": "initial_test_mark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Initial Test Mark"
+  },
+  {
+   "fieldname": "final_test_mark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Final Test Mark"
+  },
+  {
+   "fieldname": "average_mark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Average Mark"
+  },
+  {
+   "fieldname": "intermediate_test_mark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Intermediate Test Mark"
+  },
+  {
+   "fieldname": "grading_level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grading Level"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-27 23:57:38.200731",
+ "modified_by": "Administrator",
+ "module": "IFIApp",
+ "name": "EnglishMark",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

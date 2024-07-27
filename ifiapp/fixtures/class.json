@@ -1,12 +1,5 @@
 [
  {
-  "class_name": "6",
-  "docstatus": 0,
-  "doctype": "Class",
-  "modified": "2024-07-21 01:10:56.106107",
-  "name": "6"
- },
- {
   "class_name": "7",
   "docstatus": 0,
   "doctype": "Class",
@@ -33,5 +26,12 @@
   "doctype": "Class",
   "modified": "2024-07-21 01:11:15.492134",
   "name": "10"
+ },
+ {
+  "class_name": "6",
+  "docstatus": 0,
+  "doctype": "Class",
+  "modified": "2024-07-21 01:10:56.106107",
+  "name": "6"
  }
 ]
