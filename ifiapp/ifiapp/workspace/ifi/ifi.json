@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"7wySOf3Hco\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">IFI</span>\",\"col\":12}},{\"id\":\"eApqzGM2pm\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"jQ0vMQOeVe\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"App Users\",\"col\":3}},{\"id\":\"yaQ7456zY2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Students List\",\"col\":3}}]",
+ "content": "[{\"id\":\"7wySOf3Hco\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">IFI</span>\",\"col\":12}},{\"id\":\"eApqzGM2pm\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"qgb1wnVp1Y\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"SignUp applications\",\"col\":6}},{\"id\":\"uXDnJRCPCD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Approved Users\",\"col\":6}},{\"id\":\"NWQuHRvpVx\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0qFeVxjB0V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Volunteers\",\"col\":4}},{\"id\":\"pcaxGuxTu7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Co Ordinators\",\"col\":4}},{\"id\":\"Zs-jkMhz1i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"QAs\",\"col\":4}},{\"id\":\"mu2eJrjqqF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sX58S8aemV\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sessions List\",\"col\":4}},{\"id\":\"yaQ7456zY2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Students List\",\"col\":3}},{\"id\":\"EknSXcM58s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance List\",\"col\":3}},{\"id\":\"wWaHeG2n9k\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O4tNR8_usc\",\"type\":\"card\",\"data\":{\"card_name\":\"Curriculum\",\"col\":4}},{\"id\":\"c8ZVJHBg1y\",\"type\":\"card\",\"data\":{\"card_name\":\"Locations\",\"col\":4}}]",
  "creation": "2024-06-18 23:11:22.859052",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,8 +11,79 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "IFI",
- "links": [],
- "modified": "2024-07-07 01:40:00.020348",
+ "links": [
+  {
+   "description": "Locations for IFI",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Locations",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "States List",
+   "link_count": 0,
+   "link_to": "States",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Districts List",
+   "link_count": 0,
+   "link_to": "Districts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Curriculum for IFI",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Curriculum",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Classes",
+   "link_count": 0,
+   "link_to": "Class",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Modules",
+   "link_count": 0,
+   "link_to": "IFIModule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Topics",
+   "link_count": 0,
+   "link_to": "Topic",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-07-28 17:39:28.976651",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "IFI",
@@ -20,16 +91,40 @@
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "UserSignups",
+   "label": "SignUp applications",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "AppUser",
+   "label": "Approved Users",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "ClassSession",
+   "label": "Sessions List",
+   "quick_list_filter": "[]"
+  }
+ ],
  "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [
   {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Volunteers",
+   "link_to": "AppUser",
+   "stats_filter": "[[\"AppUser\",\"is_volunteer\",\"=\",1,false]]",
+   "type": "DocType"
+  },
+  {
    "color": "Grey",
    "doc_view": "List",
-   "label": "App Users",
-   "link_to": "AppUser",
-   "stats_filter": "[]",
+   "label": "Attendance List",
+   "link_to": "Attendance",
+   "stats_filter": "[[\"Attendance\",\"is_present\",\"=\",1,false]]",
    "type": "DocType"
   },
   {
@@ -38,6 +133,22 @@
    "label": "Students List",
    "link_to": "Student",
    "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Co Ordinators",
+   "link_to": "AppUser",
+   "stats_filter": "[[\"AppUser\",\"is_coordinator\",\"=\",1,false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "QAs",
+   "link_to": "AppUser",
+   "stats_filter": "[[\"AppUser\",\"is_qa\",\"=\",1,false]]",
    "type": "DocType"
   }
  ],

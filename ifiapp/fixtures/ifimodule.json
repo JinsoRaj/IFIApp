@@ -2,14 +2,16 @@
  {
   "docstatus": 0,
   "doctype": "IFIModule",
-  "modified": "2024-07-27 20:19:19.841215",
+  "max_marks": "25",
+  "modified": "2024-07-28 16:48:24.921159",
   "module_name": "English",
   "name": "English"
  },
  {
   "docstatus": 0,
   "doctype": "IFIModule",
-  "modified": "2024-07-27 20:19:26.113293",
+  "max_marks": "25",
+  "modified": "2024-07-28 16:48:16.670946",
   "module_name": "Maths",
   "name": "Maths"
  }
