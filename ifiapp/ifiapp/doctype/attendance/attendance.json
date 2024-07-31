@@ -11,8 +11,7 @@
   "student_id",
   "column_break_dflc",
   "date",
-  "is_present",
-  "is_absent"
+  "is_present"
  ],
  "fields": [
   {
@@ -32,16 +31,11 @@
    "label": "Date"
   },
   {
-   "default": "0",
+   "default": "True",
    "fieldname": "is_present",
-   "fieldtype": "Check",
-   "label": "is Present"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_absent",
-   "fieldtype": "Check",
-   "label": "is Absent"
+   "fieldtype": "Select",
+   "label": "is Present",
+   "options": "True\nFalse"
   },
   {
    "fieldname": "student_id",
@@ -56,7 +50,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-13 17:58:49.219879",
+ "modified": "2024-08-01 02:34:32.984361",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Attendance",
