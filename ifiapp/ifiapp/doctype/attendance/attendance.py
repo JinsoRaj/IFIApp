@@ -9,8 +9,14 @@ class Attendance(Document):
 	pass
 
 
+attendance_data = [
+    {'student_id': 'STUD-2024-00001', 'is_present': 'True'},
+    {'student_id': 'STUD-2024-00002', 'is_present': 'True'}
+    # Add more records as needed
+]
 
-def submit_attendance(attendance_data):
+@frappe.whitelist()
+def submit_attendance():
     """
     Submit attendance for a list of students. Each entry in `attendance_data` is expected to be
     a dictionary with keys: 'student_id', 'is_present', and 'is_absent'.
@@ -23,7 +29,7 @@ def submit_attendance(attendance_data):
     """
     try:
         # Start a new database transaction
-        #frappe.db.begin()
+        frappe.db.begin()
 
         for record in attendance_data:
             student_id = record.get('student_id')
@@ -41,18 +47,24 @@ def submit_attendance(attendance_data):
 
         # Commit the transaction if all records are inserted successfully
         frappe.db.commit()
+        return {
+             "status": 1,
+             "info": "Bulk Attendance marked"
+		}
 
     except Exception as e:
         # Rollback the transaction if any error occurs
         frappe.db.rollback()
+        frappe.log_error(frappe.get_traceback(), "Attendance Submission Failed")
+        response = {
+            "status": 0,
+            "info": "Bulk Attendance failed"
+        }
+        
+        # Send a custom error response
+        return response
+    
         #frappe.log_error(frappe.get_traceback(), "Attendance Submission Failed")
         #raise frappe.ValidationError("Attendance submission failed. Please try again later.")
-
-# Example usage:
-attendance_data = [
-    {'student_id': 'S001', 'is_present': 1, 'is_absent': 0},
-    {'student_id': 'S002', 'is_present': 0, 'is_absent': 1},
-    # Add more records as needed
-]
-
+        
 #submit_attendance(attendance_data)
