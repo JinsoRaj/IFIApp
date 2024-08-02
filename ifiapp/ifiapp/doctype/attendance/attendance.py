@@ -31,13 +31,16 @@ def submit_attendance(attendance_list: list | str):
     try:
         # Start a new database transaction
         frappe.db.begin()
-        #print(f"Raw mydata_param: {mydata}")
-        attendance_list_str = attendance_list.replace("'", '"')
-        attendance_array = json.loads(attendance_list_str)
+        #print(f"Raw mydata_param: {attendance_list}")
+        #attendance_list_str = attendance_list.replace("'", '"')
+        #attendance_array = json.loads(attendance_list)
+        #attendance_array = json.dumps(attendance_list, indent=4)
+        
 
-        for record in attendance_array:
-            student_id = record.get('student_id')
-            is_present = record.get('is_present')
+        for record in attendance_list:
+            print(f"recorditem: {record}")
+            student_id = record["student_id"]
+            is_present = record["is_present"]
 
             # Create a new Attendance document
             attendance_doc = frappe.get_doc({
