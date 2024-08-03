@@ -84,8 +84,7 @@
   {
    "fieldname": "total_attendance",
    "fieldtype": "Int",
-   "label": "Attendance so far",
-   "read_only": 1
+   "label": "Attendance so far"
   },
   {
    "default": "STUD-.YYYY.-",
@@ -118,7 +117,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-04 00:33:07.776993",
+ "modified": "2024-08-04 00:42:59.484975",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",
