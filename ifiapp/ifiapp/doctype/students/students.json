@@ -54,13 +54,14 @@
    "fieldname": "vol_id",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Volunteer ID"
+   "label": "Volunteer ID",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-07-25 01:01:35.756925",
+ "modified": "2024-08-04 00:53:44.275230",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Students",
