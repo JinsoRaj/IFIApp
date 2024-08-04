@@ -82,6 +82,7 @@
    "label": "Skills"
   },
   {
+   "default": "-1",
    "fieldname": "total_attendance",
    "fieldtype": "Int",
    "label": "Attendance so far",
@@ -118,7 +119,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-04 01:20:17.967843",
+ "modified": "2024-08-04 22:45:30.868737",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",
