@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{ifi_id}-{date_time}",
+ "creation": "2024-08-07 01:03:42.640508",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_rpsv",
+  "ifi_id",
+  "app_user",
+  "user_link",
+  "date_time",
+  "column_break_pqem",
+  "co_cord",
+  "sc_cord",
+  "qa_online",
+  "qa_offline",
+  "tr_trainer",
+  "tr_online",
+  "tr_offline",
+  "column_break_cpwp",
+  "data_work",
+  "upskill_session",
+  "conveyance",
+  "misc_work",
+  "teaching_hours",
+  "multi",
+  "current_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_rpsv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "ifi_id",
+   "fieldtype": "Data",
+   "label": "IFI ID"
+  },
+  {
+   "fetch_from": "app_user.user_details",
+   "fieldname": "user_link",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval:doc.teaching_hours;",
+   "fieldname": "multi",
+   "fieldtype": "Int",
+   "label": "Hours",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "fieldname": "current_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Waiting\nApproved\nRejected"
+  },
+  {
+   "fieldname": "app_user",
+   "fieldtype": "Link",
+   "label": "Volunteer",
+   "options": "AppUser",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pqem",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tr_trainer",
+   "fieldtype": "Check",
+   "label": "Training(trainer)",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "tr_online",
+   "fieldtype": "Check",
+   "label": "Training teachback(online)",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "tr_offline",
+   "fieldtype": "Check",
+   "label": "Training teachback(offline)",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "data_work",
+   "fieldtype": "Check",
+   "label": "Data work by Insight team",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "co_cord",
+   "fieldtype": "Check",
+   "label": "College Coordination",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "sc_cord",
+   "fieldtype": "Check",
+   "label": "School Coordination",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "qa_online",
+   "fieldtype": "Check",
+   "label": "QA Online",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "qa_offline",
+   "fieldtype": "Check",
+   "label": "QA Offline",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "upskill_session",
+   "fieldtype": "Check",
+   "label": "Upskill session",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "conveyance",
+   "fieldtype": "Check",
+   "label": "Conveyance",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "misc_work",
+   "fieldtype": "Check",
+   "label": "Miscellaneous(Calls, excel work etc)",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "teaching_hours",
+   "fieldtype": "Check",
+   "label": "Teaching(based on hours)",
+   "read_only_depends_on": "eval:doc.current_status == \"Approved\";"
+  },
+  {
+   "fieldname": "column_break_cpwp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-09 02:55:15.922792",
+ "modified_by": "Administrator",
+ "module": "IFIApp",
+ "name": "Reward",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Volunteer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Coordinator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "app_user",
+ "track_changes": 1
+}

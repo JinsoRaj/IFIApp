@@ -214,7 +214,7 @@ app_license = "MIT"
 # 	"ifiapp.auth.validate"
 # ]
 
-fixtures = ["Topic", "IFIModule",{
+fixtures = ["Topic", "IFIModule","Energy Point Settings","Energy Point Rule",{
   'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','Quality Assurance','ifiuser'))},
   'dt': 'Role Profile', 'filters': {'name': ('in', ('ifi'))},
   'dt': 'Workflow', 'filters': {'name': ('in', ('UserApproval'))},

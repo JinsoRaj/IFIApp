@@ -1,0 +1,12 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Energy Point Settings",
+  "enabled": 1,
+  "last_point_allocation_date": "2024-08-09",
+  "modified": "2024-08-09 00:42:24.012476",
+  "name": "Energy Point Settings",
+  "point_allocation_periodicity": "Daily",
+  "review_levels": []
+ }
+]
