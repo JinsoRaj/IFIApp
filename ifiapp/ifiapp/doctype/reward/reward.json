@@ -19,13 +19,14 @@
   "tr_trainer",
   "tr_online",
   "tr_offline",
-  "column_break_cpwp",
   "data_work",
   "upskill_session",
   "conveyance",
   "misc_work",
   "teaching_hours",
   "multi",
+  "column_break_cpwp",
+  "comments",
   "current_status"
  ],
  "fields": [
@@ -165,11 +166,16 @@
   {
    "fieldname": "column_break_cpwp",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Long Text",
+   "label": "Comments"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-09 02:55:15.922792",
+ "modified": "2024-08-09 23:22:59.966648",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Reward",

@@ -13,3 +13,16 @@ class Reward(Document):
 		self.app_user = app_user
 		if self.app_user == None:
 			frappe.throw("No such IFI ID")
+
+def increase_points(doc, method):
+	result = frappe.get_all(
+		"Energy Point Log",
+		filters={"user": doc.user, "type": ["!=", "Review"]},
+		group_by="type",
+		order_by="type",
+		fields=["ABS(sum(points)) as points"],
+	)
+	
+	energy_points = result[0]['points']
+
+	frappe.db.set_value("AppUser",doc.user,"points_gained",energy_points)

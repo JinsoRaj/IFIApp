@@ -233,5 +233,8 @@ doc_events = {
     "Attendance":{
         # "after_insert": "ifiapp.ifiapp.doctype.student.student.change_total_attendance",
         "on_update": "ifiapp.ifiapp.doctype.student.student.change_total_attendance"
+    },
+    "Energy Point Log": {
+        "after_insert": "ifiapp.ifiapp.doctype.reward.reward.increase_points"
     }
 }
