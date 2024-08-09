@@ -26,3 +26,34 @@ def increase_points(doc, method):
 	energy_points = result[0]['points']
 
 	frappe.db.set_value("AppUser",doc.user,"points_gained",energy_points)
+
+@frappe.whitelist()
+def get_recent_rewards(ifi_id):
+	response = {
+				"status": False,
+				"info": "No Rewards to show",
+				"recent_points": []
+			}
+	try:
+		app_user = frappe.db.get_value("AppUser", {"ifi_id": ifi_id},"name")
+		points_list = []
+		points_list = frappe.get_all(
+			"Energy Point Log",
+			filters={"user": app_user},  # Filter by user
+			fields=["rule","points"],  # Adjust fields as needed
+			limit=5,
+			order_by='creation desc'
+		)
+		if points_list:
+			response = {
+				"status": True,
+				"info": "Recent Rewards",
+				"recent_points": points_list
+			}
+		return response
+	except Exception as e:
+		response = {
+            "status": False,
+            "info": "Error in showing your rewards!"
+        }
+		return response
