@@ -34,7 +34,9 @@ def ping():
 def send_email(email_address,number_code):
     frappe.sendmail(recipients=email_address,
 		subject="IFI Mail verification code",
-		message= number_code)
+		message= number_code,
+		delayed=False,
+		retry=1,)
 
 #signup function - used to register the user in backend. bydefault the user is disabled and wont be able to login. Once the email is verified, the user is enabled and allowed to login.
 @frappe.whitelist(allow_guest=True)
