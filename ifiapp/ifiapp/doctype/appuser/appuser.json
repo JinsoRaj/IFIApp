@@ -40,8 +40,7 @@
   {
    "fieldname": "points_gained",
    "fieldtype": "Int",
-   "label": "Points",
-   "read_only": 1
+   "label": "Points"
   },
   {
    "fieldname": "column_break_7exv",
@@ -133,7 +132,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-11 19:38:39.925386",
+ "modified": "2024-08-11 19:42:30.133309",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",
