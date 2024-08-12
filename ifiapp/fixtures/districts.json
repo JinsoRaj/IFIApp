@@ -1,0 +1,82 @@
+[
+ {
+  "district_name": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.000051",
+  "name": "Thiruvananthapuram",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Kollam",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.009470",
+  "name": "Kollam",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Pathanamthitta",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.012435",
+  "name": "Pathanamthitta",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Alappuzha",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.014222",
+  "name": "Alappuzha",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Kottayam",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.016647",
+  "name": "Kottayam",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.018298",
+  "name": "Ernakulam",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Thrissur",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.020013",
+  "name": "Thrissur",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Palakkad",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.028054",
+  "name": "Palakkad",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Kozhikode",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.029984",
+  "name": "Kozhikode",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Kasaragod",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.032621",
+  "name": "Kasaragod",
+  "name_of_state": "Kerala"
+ }
+]
