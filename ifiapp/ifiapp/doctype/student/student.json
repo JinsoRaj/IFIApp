@@ -19,8 +19,12 @@
   "contact_number",
   "english_level",
   "maths_level",
-  "skills",
   "total_attendance",
+  "skills_list_section",
+  "visual_spatial",
+  "intrap",
+  "interp",
+  "linguistic",
   "section_break_weer",
   "maths_marks",
   "english_marks"
@@ -77,11 +81,6 @@
    "label": "Maths Level"
   },
   {
-   "fieldname": "skills",
-   "fieldtype": "Data",
-   "label": "Skills"
-  },
-  {
    "default": "-1",
    "fieldname": "total_attendance",
    "fieldtype": "Int",
@@ -115,11 +114,40 @@
    "fieldtype": "Table",
    "label": "English Marks",
    "options": "EnglishMark"
+  },
+  {
+   "fieldname": "skills_list_section",
+   "fieldtype": "Section Break",
+   "label": "Skills list"
+  },
+  {
+   "default": "0",
+   "fieldname": "visual_spatial",
+   "fieldtype": "Check",
+   "label": "Visual Spatial: Drawing, Painting, Visual Arts"
+  },
+  {
+   "default": "0",
+   "fieldname": "intrap",
+   "fieldtype": "Check",
+   "label": "Intrapersonal: Self Awareness"
+  },
+  {
+   "default": "0",
+   "fieldname": "interp",
+   "fieldtype": "Check",
+   "label": "Interpersonal:  Communication, Relationship building, Leadership"
+  },
+  {
+   "default": "0",
+   "fieldname": "linguistic",
+   "fieldtype": "Check",
+   "label": "Linguistic: Verbal  Reading, Writing, Debate, Speech, Storytelling"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-04 22:45:30.868737",
+ "modified": "2024-08-13 07:55:30.436993",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",

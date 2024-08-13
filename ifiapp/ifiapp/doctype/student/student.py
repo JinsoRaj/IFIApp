@@ -9,6 +9,35 @@ class Student(Document):
 	pass
 
 
+@frappe.whitelist()
+def add_student(**kwargs):
+    try:
+        # Extract the rewards array from kwargs
+        skills = kwargs.get('skills', [])
+        
+        # Prepare a dictionary to hold the reward fields
+        student_data = {}
+        
+        # Parse the rewards array into individual fields
+        for skill in skills:
+            for key, value in skill.items():
+                student_data[key] = value
+
+        # Merge reward_data back with other kwargs to create the document
+        new_student = frappe.get_doc({
+            'doctype': 'Student',
+            **kwargs,            # Include all other fields
+            **student_data        # Add the parsed reward fields
+        })
+        new_student.insert()
+        frappe.db.commit()
+
+        return {'status': 'success', 'message': 'Student added successfully.'}
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Error in adding student")
+        return {'status': 'error', 'message': str(e)}
+
+
 # update the attendance to student data
 def change_total_attendance(doc, method):
 		
