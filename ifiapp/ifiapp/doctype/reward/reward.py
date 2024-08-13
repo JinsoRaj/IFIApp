@@ -30,7 +30,7 @@ def increase_points(doc, method):
 @frappe.whitelist()
 def get_recent_rewards(ifi_id):
 	response = {
-				"status": False,
+				"status": "error",
 				"info": "No Rewards to show",
 				"recent_points": []
 			}
@@ -46,14 +46,43 @@ def get_recent_rewards(ifi_id):
 		)
 		if points_list:
 			response = {
-				"status": True,
+				"status": "success",
 				"info": "Recent Rewards",
 				"recent_points": points_list
 			}
 		return response
 	except Exception as e:
 		response = {
-            "status": False,
+            "status": "error",
             "info": "Error in showing your rewards!"
         }
 		return response
+	
+
+@frappe.whitelist()
+def add_rewards(**kwargs):
+    try:
+        # Extract the rewards array from kwargs
+        rewards = kwargs.get('rewards', [])
+        
+        # Prepare a dictionary to hold the reward fields
+        reward_data = {}
+        
+        # Parse the rewards array into individual fields
+        for reward in rewards:
+            for key, value in reward.items():
+                reward_data[key] = value
+
+        # Merge reward_data back with other kwargs to create the document
+        new_reward = frappe.get_doc({
+            'doctype': 'Reward',
+            **kwargs,            # Include all other fields
+            **reward_data        # Add the parsed reward fields
+        })
+        new_reward.insert()
+        frappe.db.commit()
+
+        return {'status': 'success', 'message': 'Reward added successfully.'}
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Error adding reward")
+        return {'status': 'error', 'message': str(e)}
