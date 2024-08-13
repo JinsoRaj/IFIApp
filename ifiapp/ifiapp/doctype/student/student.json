@@ -22,9 +22,14 @@
   "total_attendance",
   "skills_list_section",
   "visual_spatial",
-  "intrap",
-  "interp",
-  "linguistic",
+  "linguistic_verbal",
+  "interpersonal",
+  "intrapersonal",
+  "column_break_gspz",
+  "logical_mathematical",
+  "musical",
+  "bodily_kinesthetic",
+  "naturalistic",
   "section_break_weer",
   "maths_marks",
   "english_marks"
@@ -128,26 +133,54 @@
   },
   {
    "default": "0",
-   "fieldname": "intrap",
+   "fieldname": "linguistic_verbal",
    "fieldtype": "Check",
-   "label": "Intrapersonal: Self Awareness"
+   "label": "Linguistic Verbal:  Reading, Writing, Debate, Speech, Storytelling"
   },
   {
    "default": "0",
-   "fieldname": "interp",
+   "fieldname": "interpersonal",
    "fieldtype": "Check",
    "label": "Interpersonal:  Communication, Relationship building, Leadership"
   },
   {
    "default": "0",
-   "fieldname": "linguistic",
+   "fieldname": "intrapersonal",
    "fieldtype": "Check",
-   "label": "Linguistic: Verbal  Reading, Writing, Debate, Speech, Storytelling"
+   "label": "Intrapersonal: Self Awareness"
+  },
+  {
+   "default": "0",
+   "fieldname": "logical_mathematical",
+   "fieldtype": "Check",
+   "label": "Logical Mathematical: Problem solving, analytical, scientific, mathematical thinking and interest"
+  },
+  {
+   "default": "0",
+   "fieldname": "musical",
+   "fieldtype": "Check",
+   "label": "Musical: Singing, musical instruments, musical patterns and tones"
+  },
+  {
+   "default": "0",
+   "fieldname": "bodily_kinesthetic",
+   "fieldtype": "Check",
+   "label": "Bodily Kinesthetic: Dance, Sports , Physical coordination"
+  },
+  {
+   "default": "0",
+   "fieldname": "naturalistic",
+   "fieldtype": "Check",
+   "label": "Naturalistic: interested in learning topics related to nature and biology, enjoy gardening, camping, hiking etcetra"
+  },
+  {
+   "fieldname": "column_break_gspz",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-13 07:55:30.436993",
+ "modified": "2024-08-13 14:27:10.594872",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",
