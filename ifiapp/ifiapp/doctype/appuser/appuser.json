@@ -21,6 +21,7 @@
   "state",
   "district",
   "user_details",
+  "emp_status",
   "res_address",
   "students_list_section",
   "students_list"
@@ -128,11 +129,17 @@
    "fieldname": "ifi_id",
    "fieldtype": "Data",
    "label": "IFI ID"
+  },
+  {
+   "fieldname": "emp_status",
+   "fieldtype": "Select",
+   "label": "Employment Status",
+   "options": "Student\nEmployee\nUn-Employee"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-11 19:42:30.133309",
+ "modified": "2024-08-14 00:04:48.557933",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",

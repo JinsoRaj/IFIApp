@@ -22,7 +22,7 @@ def add_as_appuser(doc, method):
 			app_user.gender = doc.gender
 			app_user.state = doc.state
 			app_user.district = doc.district
-			app_user.district = doc.district
+			app_user.emp_status = doc.emp_status
 			app_user.res_address = doc.res_address
 			random_number = random.randint(100000, 999999)
 			app_user.ifi_id = f"IFI-{random_number}"
