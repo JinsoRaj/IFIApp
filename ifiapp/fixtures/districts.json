@@ -8,14 +8,6 @@
   "name_of_state": "Kerala"
  },
  {
-  "district_name": "Kollam",
-  "docstatus": 0,
-  "doctype": "Districts",
-  "modified": "2024-08-12 20:41:46.009470",
-  "name": "Kollam",
-  "name_of_state": "Kerala"
- },
- {
   "district_name": "Pathanamthitta",
   "docstatus": 0,
   "doctype": "Districts",
@@ -77,6 +69,14 @@
   "doctype": "Districts",
   "modified": "2024-08-12 20:41:46.032621",
   "name": "Kasaragod",
+  "name_of_state": "Kerala"
+ },
+ {
+  "district_name": "Kollam",
+  "docstatus": 0,
+  "doctype": "Districts",
+  "modified": "2024-08-12 20:41:46.009470",
+  "name": "Kollam",
   "name_of_state": "Kerala"
  }
 ]

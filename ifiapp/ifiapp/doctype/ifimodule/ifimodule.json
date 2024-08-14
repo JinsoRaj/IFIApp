@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:module_name",
+ "autoname": "field:module_id",
  "creation": "2024-07-27 19:36:06.629436",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_shay",
+  "module_id",
   "module_name",
   "max_marks"
  ],
@@ -18,18 +19,23 @@
   {
    "fieldname": "module_name",
    "fieldtype": "Data",
-   "label": "Module Name",
-   "unique": 1
+   "label": "Module Name"
   },
   {
    "fieldname": "max_marks",
    "fieldtype": "Data",
    "label": "Maximum marks allowed"
+  },
+  {
+   "fieldname": "module_id",
+   "fieldtype": "Int",
+   "label": "Module ID",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-28 16:47:23.968655",
+ "modified": "2024-08-14 01:33:05.571329",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "IFIModule",
@@ -71,7 +77,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "module_name"
 }

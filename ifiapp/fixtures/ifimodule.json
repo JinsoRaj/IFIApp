@@ -3,16 +3,18 @@
   "docstatus": 0,
   "doctype": "IFIModule",
   "max_marks": "25",
-  "modified": "2024-07-28 16:48:24.921159",
-  "module_name": "English",
-  "name": "English"
+  "modified": "2024-08-14 01:31:12.771148",
+  "module_id": 1,
+  "module_name": "Maths",
+  "name": "1"
  },
  {
   "docstatus": 0,
   "doctype": "IFIModule",
   "max_marks": "25",
-  "modified": "2024-07-28 16:48:16.670946",
-  "module_name": "Maths",
-  "name": "Maths"
+  "modified": "2024-08-14 01:32:03.124003",
+  "module_id": 2,
+  "module_name": "English",
+  "name": "2"
  }
 ]

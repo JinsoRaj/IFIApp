@@ -1,12 +1,14 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:topic_name",
+ "autoname": "field:topic_id",
  "creation": "2024-07-27 19:33:18.800222",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_zeci",
+  "topic_id",
   "topic_name",
   "parent_module"
  ],
@@ -19,8 +21,7 @@
    "fieldname": "topic_name",
    "fieldtype": "Data",
    "in_standard_filter": 1,
-   "label": "Topic Name",
-   "unique": 1
+   "label": "Topic Name"
   },
   {
    "fieldname": "parent_module",
@@ -28,11 +29,17 @@
    "in_standard_filter": 1,
    "label": "Parent Module ",
    "options": "IFIModule"
+  },
+  {
+   "fieldname": "topic_id",
+   "fieldtype": "Int",
+   "label": "Topic ID",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-27 19:37:49.325825",
+ "modified": "2024-08-14 01:33:27.246035",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Topic",
@@ -73,7 +80,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "topic_name"
 }

@@ -9,9 +9,12 @@
   "section_break_bbc6",
   "topic",
   "initial_test_mark",
+  "initial_final_mark",
   "intermediate_test_mark",
+  "intermediate_final_mark",
   "final_test_mark",
-  "average_mark",
+  "final_final_mark",
+  "mark_progress",
   "grading_level"
  ],
  "fields": [
@@ -24,30 +27,27 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Topic",
-   "link_filters": "[[\"Topic\",\"parent_module\",\"=\",\"English\"]]",
+   "link_filters": "[[\"Topic\",\"parent_module\",\"=\",\"2\"]]",
    "options": "Topic"
   },
   {
+   "default": "-1",
    "fieldname": "initial_test_mark",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Initial Test Mark"
   },
   {
+   "default": "-1",
    "fieldname": "final_test_mark",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Final Test Mark"
   },
   {
-   "fieldname": "average_mark",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Average Mark"
-  },
-  {
+   "default": "-1",
    "fieldname": "intermediate_test_mark",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Intermediate Test Mark"
   },
@@ -56,12 +56,37 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Grading Level"
+  },
+  {
+   "default": "-1",
+   "fieldname": "initial_final_mark",
+   "fieldtype": "Int",
+   "label": "Initial Final Mark"
+  },
+  {
+   "default": "-1",
+   "fieldname": "intermediate_final_mark",
+   "fieldtype": "Int",
+   "label": "Intermediate Final Mark"
+  },
+  {
+   "default": "-1",
+   "fieldname": "final_final_mark",
+   "fieldtype": "Int",
+   "label": "Final Final Mark"
+  },
+  {
+   "default": "-1",
+   "fieldname": "mark_progress",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Mark Progress"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-07-27 23:57:38.200731",
+ "modified": "2024-08-14 11:33:44.503282",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "EnglishMark",
