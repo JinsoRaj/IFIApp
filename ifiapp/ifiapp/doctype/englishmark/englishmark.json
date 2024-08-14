@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "prompt",
  "creation": "2024-07-27 21:06:07.766235",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,11 +10,11 @@
   "section_break_bbc6",
   "topic",
   "initial_test_mark",
-  "initial_final_mark",
+  "initial_total_mark",
   "intermediate_test_mark",
-  "intermediate_final_mark",
+  "intermediate_total_mark",
   "final_test_mark",
-  "final_final_mark",
+  "final_total_mark",
   "mark_progress",
   "grading_level"
  ],
@@ -59,37 +60,38 @@
   },
   {
    "default": "-1",
-   "fieldname": "initial_final_mark",
-   "fieldtype": "Int",
-   "label": "Initial Final Mark"
-  },
-  {
-   "default": "-1",
-   "fieldname": "intermediate_final_mark",
-   "fieldtype": "Int",
-   "label": "Intermediate Final Mark"
-  },
-  {
-   "default": "-1",
-   "fieldname": "final_final_mark",
-   "fieldtype": "Int",
-   "label": "Final Final Mark"
-  },
-  {
-   "default": "-1",
    "fieldname": "mark_progress",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Mark Progress"
+  },
+  {
+   "default": "-1",
+   "fieldname": "initial_total_mark",
+   "fieldtype": "Int",
+   "label": "Initial Total Mark"
+  },
+  {
+   "default": "-1",
+   "fieldname": "intermediate_total_mark",
+   "fieldtype": "Int",
+   "label": "Intermediate Total Mark"
+  },
+  {
+   "default": "-1",
+   "fieldname": "final_total_mark",
+   "fieldtype": "Int",
+   "label": "Final Total Mark"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-14 11:33:44.503282",
+ "modified": "2024-08-14 13:58:04.434990",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "EnglishMark",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
