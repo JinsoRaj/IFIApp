@@ -11,10 +11,13 @@
   "topic",
   "initial_test_mark",
   "initial_total_mark",
+  "initial_grade_level",
   "intermediate_test_mark",
   "intermediate_total_mark",
+  "intermediate_grade_level",
   "final_test_mark",
   "final_total_mark",
+  "final_grade_level",
   "mark_progress",
   "grading_level"
  ],
@@ -82,12 +85,27 @@
    "fieldname": "final_total_mark",
    "fieldtype": "Int",
    "label": "Final Total Mark"
+  },
+  {
+   "fieldname": "initial_grade_level",
+   "fieldtype": "Data",
+   "label": "Initial grade level"
+  },
+  {
+   "fieldname": "intermediate_grade_level",
+   "fieldtype": "Data",
+   "label": "Intermediate grade level"
+  },
+  {
+   "fieldname": "final_grade_level",
+   "fieldtype": "Data",
+   "label": "final grade level"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-14 13:58:04.434990",
+ "modified": "2024-08-14 16:34:54.118902",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "EnglishMark",
