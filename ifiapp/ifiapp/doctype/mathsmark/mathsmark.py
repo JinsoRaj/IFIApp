@@ -139,7 +139,7 @@ def bulk_create_or_update_maths_mark_entries(maths_marks):
         frappe.db.commit()
         return {
             "status": "success",
-            "message": "Bulk MathsMark entries processed successfully"
+            "message_text": "Bulk MathsMark entries processed successfully"
         }
 
     except Exception as e:
@@ -148,6 +148,6 @@ def bulk_create_or_update_maths_mark_entries(maths_marks):
         frappe.log_error(frappe.get_traceback(), "Bulk MathsMark Entry Failed")
         return {
             "status": "error",
-            "message": "Bulk MathsMark processing failed",
+            "message_text": "Bulk MathsMark processing failed",
             "error": str(e)
         }

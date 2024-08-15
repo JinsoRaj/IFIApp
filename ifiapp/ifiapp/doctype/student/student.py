@@ -32,10 +32,10 @@ def add_student(**kwargs):
         new_student.insert()
         frappe.db.commit()
 
-        return {'status': 'success', 'message': 'Student added successfully.'}
+        return {'status': 'success', 'message_text': 'Student added successfully.'}
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "Error in adding student")
-        return {'status': 'error', 'message': str(e)}
+        return {'status': 'error', 'message_text': str(e)}
 
 
 # update the attendance to student data

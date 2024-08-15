@@ -82,7 +82,7 @@ def add_rewards(**kwargs):
         new_reward.insert()
         frappe.db.commit()
 
-        return {'status': 'success', 'message': 'Reward added successfully.'}
+        return {'status': 'success', 'message_text': 'Reward added successfully.'}
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "Error adding reward")
-        return {'status': 'error', 'message': str(e)}
+        return {'status': 'error', 'message_text': str(e)}
