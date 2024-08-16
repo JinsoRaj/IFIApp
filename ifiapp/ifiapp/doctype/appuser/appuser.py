@@ -60,46 +60,74 @@ def add_roles_in_appuser(doc, method):
 
 @frappe.whitelist()
 def get_appuser_and_students(ifi_id):
-    # Fetch the AppUser document
-    app_user = frappe.get_doc("AppUser", {"ifi_id": ifi_id})
-    
-    # Initialize the list to hold student details
-    student_details = []
+    try:
+        # Attempt to fetch the AppUser document
+        app_user = frappe.get_doc("AppUser", {"ifi_id": ifi_id})
 
-    # Iterate over the students_list child table
-    for student in app_user.students_list:
-        # Fetch the linked Student document using the 'student' field from the child table
-        student_doc = frappe.get_doc("Student", student.student)
-        
-        # Add required fields to the result
-        student_details.append({
-            "student_id": student.student,             # Volunteer ID (from the child table)
-            "full_name": student_doc.full_name,   # Full name from Student doctype
-				"school_name": student_doc.school_name,
-				"class": student_doc.class_name,
-				"school_district": student_doc.school_district,      # Replace with the actual field name in Student doctype
-            "grade": student_doc.grade,
-				"total_attendance": student_doc.total_attendance,
-								            # Replace with the actual field name in Student doctype
-        })
-		  
-		  
-    ifi_user_details = {
-        "name": app_user.name,
-        "ifi_id": app_user.ifi_id,
-        "full_name": app_user.full_name,
-        "gender": app_user.gender,
-        "points_gained": app_user.points_gained,
-        "is_volunteer": app_user.is_volunteer,
-        "is_coordinator": app_user.is_coordinator,
-        "is_qa": app_user.is_qa,
-        "state": app_user.state,
-        "district": app_user.district,
-        "user_details": app_user.user_details,
-        "res_address": app_user.res_address,
-        "doctype": app_user.doctype,
-    }
+        # Initialize the list to hold student details
+        student_details = []
 
-    return {"message_test":"AppUser data",
-				"ifi_user_details": ifi_user_details,
-				"student_details":student_details}
+        # Iterate over the students_list child table
+        for student in app_user.students_list:
+            # Fetch the linked Student document using the 'student' field from the child table
+            student_doc = frappe.get_doc("Student", student.student)
+            
+            # Add required fields to the result
+            student_details.append({
+                "student_id": student.student,
+                "full_name": student_doc.full_name,
+                "school_name": student_doc.school_name,
+                "class": student_doc.class_name,
+                "school_district": student_doc.school_district,
+                "grade": student_doc.grade,
+            })
+
+        # Prepare the AppUser details
+        ifi_user_details = {
+            "name": app_user.name,
+            "ifi_id": app_user.ifi_id,
+            "full_name": app_user.full_name,
+            "gender": app_user.gender,
+            "points_gained": app_user.points_gained,
+            "is_volunteer": app_user.is_volunteer,
+            "is_coordinator": app_user.is_coordinator,
+            "is_qa": app_user.is_qa,
+            "state": app_user.state,
+            "district": app_user.district,
+            "user_details": app_user.user_details,
+            "res_address": app_user.res_address,
+            "doctype": app_user.doctype,
+        }
+
+        # If everything is successful, set the response
+        frappe.local.response.http_status_code = 200 
+      #   frappe.response["message"] = {
+      #       "status": "success",
+      #       "message_text": "AppUser and student details retrieved successfully."
+      #   }
+        frappe.response["data"] = {
+            "ifi_user_details": ifi_user_details,
+            "student_details": student_details
+        }
+
+    except frappe.DoesNotExistError:
+        # Handle case where the AppUser or Student document doesn't exist
+        frappe.local.response.http_status_code = 404
+      #   frappe.response["message"] = {
+      #       "status": "error",
+      #       "message_text": "AppUser or Student not found."
+      #   }
+        frappe.response["data"] = {}
+
+    except Exception as e:
+        # Handle unexpected errors
+        frappe.local.response.http_status_code = 500
+      #   frappe.response["message"] = {
+      #       "status": "error",
+      #       "message_text": f"An unexpected error occurred: {str(e)}"
+      #   }
+        frappe.response["data"] = {}
+
+    finally:
+        # Ensure the function returns cleanly
+        return
