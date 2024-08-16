@@ -229,9 +229,11 @@ def get_profile_form(user):
 	#usersignup means user applied with details, appuser means approved users.
 	if frappe.db.exists("UserSignups", user):
 		if frappe.db.exists("AppUser", user):
+			ifi_id = frappe.db.get_value("AppUser", {"name": user},"ifi_id")
 			return{
 				"details": True,
-				"approved": True
+				"approved": True,
+				"ifi_id": ifi_id
 			}
 		else:
 			return{
