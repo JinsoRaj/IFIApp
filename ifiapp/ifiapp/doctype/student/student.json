@@ -12,7 +12,7 @@
   "full_name",
   "school_name",
   "school_district",
-  "class",
+  "class_name",
   "grade",
   "column_break_ffjp",
   "gender",
@@ -45,12 +45,6 @@
    "fieldtype": "Link",
    "label": "School",
    "options": "School"
-  },
-  {
-   "fieldname": "class",
-   "fieldtype": "Link",
-   "label": "Class",
-   "options": "Class"
   },
   {
    "fieldname": "school_district",
@@ -175,11 +169,17 @@
   {
    "fieldname": "column_break_gspz",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Link",
+   "label": "Class Name",
+   "options": "Class"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-14 15:06:48.006484",
+ "modified": "2024-08-16 01:05:16.049791",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Student",

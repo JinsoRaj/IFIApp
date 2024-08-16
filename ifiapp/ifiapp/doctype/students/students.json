@@ -8,11 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "student",
-  "vol_id",
-  "full_name",
-  "school_name",
-  "class",
-  "grade"
+  "vol_id"
  ],
  "fields": [
   {
@@ -21,34 +17,6 @@
    "in_list_view": 1,
    "label": "Student Id",
    "options": "Student"
-  },
-  {
-   "fetch_from": "student.class",
-   "fieldname": "class",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Class"
-  },
-  {
-   "fetch_from": "student.full_name",
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Student"
-  },
-  {
-   "fetch_from": "student.school_name",
-   "fieldname": "school_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "School"
-  },
-  {
-   "fetch_from": "student.grade",
-   "fieldname": "grade",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Grade"
   },
   {
    "fieldname": "vol_id",
@@ -61,7 +29,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-04 00:53:44.275230",
+ "modified": "2024-08-16 12:51:47.516042",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Students",
