@@ -77,7 +77,7 @@ def get_appuser_and_students(ifi_id):
                 "student_id": student.student,
                 "full_name": student_doc.full_name,
                 "school_name": student_doc.school_name,
-                "class": student_doc.class_name,
+                "class_name": student_doc.class_name,
                 "school_district": student_doc.school_district,
                 "grade": student_doc.grade,
             })
@@ -85,7 +85,7 @@ def get_appuser_and_students(ifi_id):
         # Prepare the AppUser details
         ifi_user_details = {
             "name": app_user.name,
-				"profile_pic": app_user.profile_pic,
+			"profile_pic": app_user.profile_pic,
             "ifi_id": app_user.ifi_id,
             "full_name": app_user.full_name,
             "gender": app_user.gender,
