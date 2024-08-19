@@ -9,6 +9,7 @@
  "field_order": [
   "section_break_bbc6",
   "topic",
+  "topic_name",
   "initial_test_mark",
   "initial_total_mark",
   "initial_grade_level",
@@ -94,12 +95,18 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "final grade level"
+  },
+  {
+   "fetch_from": "topic.topic_name",
+   "fieldname": "topic_name",
+   "fieldtype": "Data",
+   "label": "Topic Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-15 22:43:26.017848",
+ "modified": "2024-08-19 11:23:59.186426",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "EnglishMark",
