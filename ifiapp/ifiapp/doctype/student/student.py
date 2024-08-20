@@ -155,7 +155,7 @@ def manage_student(**kwargs):
 
         elif method == 'PUT':
             # Ensure student_id is provided for update
-            student_id = kwargs.get("student_id")
+            student_id = kwargs.get("name")
             if not student_id:
                 frappe.response["http_status_code"] = 400  # Bad Request
                 frappe.response["message"] = "Student ID is required for update."
