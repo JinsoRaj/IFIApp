@@ -149,16 +149,18 @@ def manage_student(**kwargs):
             # Add the skills array to the response data
             response_data["skills"] = skills_array
 
-            frappe.response["http_status_code"] = 201  # Created
-            frappe.response["message"] = "Student added successfully."
-            frappe.response["data"] = response_data
+            frappe.response["http_status_code"] = 200  # Created
+            frappe.response["status"] = "success"
+            frappe.response["message_text"] = "Student added successfully."
+            # frappe.response["data"] = response_data
 
         elif method == 'PUT':
             # Ensure student_id is provided for update
             student_id = kwargs.get("name")
             if not student_id:
                 frappe.response["http_status_code"] = 400  # Bad Request
-                frappe.response["message"] = "Student ID is required for update."
+                frappe.response["status"] = "error"
+                frappe.response["message_text"] = "Student ID is required for update."
                 return
 
             # Fetch the existing Student document
@@ -190,14 +192,17 @@ def manage_student(**kwargs):
             response_data["skills"] = skills_array
 
             frappe.response["http_status_code"] = 200  # OK
-            frappe.response["message"] = "Student updated successfully."
-            frappe.response["data"] = response_data
+            frappe.response["status"] = "success"
+            frappe.response["message_text"] = "Student updated successfully."
+            # frappe.response["data"] = response_data
 
         else:
             frappe.response["http_status_code"] = 405  # Method Not Allowed
-            frappe.response["message"] = "Method not allowed."
+            frappe.response["status"] = "error"
+            frappe.response["message_text"] = "Method not allowed."
 
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "Error in managing student")
         frappe.response["http_status_code"] = 500  # Internal Server Error
-        frappe.response["message"] = str(e)
+        frappe.response["status"] = "error"
+        frappe.response["message_text"] = str(e)

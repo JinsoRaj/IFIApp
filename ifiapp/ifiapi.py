@@ -190,6 +190,82 @@ def resend_mail(email: str):
     "message_text": "Generated a new code."
   }
 
+#custom functions for reset pass as guest
+@frappe.whitelist(allow_guest=True)
+def send_otp_code(email):
+	#use the above resend_mail
+	pass
+
+@frappe.whitelist(allow_guest=True)
+def verify_otp_code(email, number_code):
+	user = frappe.get_doc("User", email)
+	user.flags.ignore_permissions = True
+	stored_code = user.reset_password_key
+	last_reset_password_key_generated_on = user.last_reset_password_key_generated_on
+	reset_password_link_expiry = cint(
+				frappe.get_system_settings("reset_password_link_expiry_duration")
+			)
+	
+	#expired when - now_datetime() > last_reset_password_key_generated_on + timedelta(seconds=reset_password_link_expiry)
+	#if not expired - then match usercode with stored key, if same enable the user and save.
+	if now_datetime() < last_reset_password_key_generated_on + timedelta(seconds=reset_password_link_expiry):
+		
+		if number_code == stored_code:
+
+			frappe.response["http_status_code"] = 200 
+			frappe.response["status"] = "success"
+			frappe.response["message_text"] = "OTP Verified"
+			return
+	#user.reset_password_key = number_code
+	#user.last_name = "nys"
+	 
+	#key = user.reset_password_key
+	frappe.response["http_status_code"] = 400 
+	frappe.response["status"] = "error"
+	frappe.response["message_text"] = "Wrong verification code"
+	return
+
+#unsafe - redo this.
+@frappe.whitelist(allow_guest=True)
+def reset_password(email, new_password):
+    try:
+        # Validate email and password
+        if not email or not new_password:
+            frappe.response["http_status_code"] = 400  # Bad Request
+            frappe.response["status"] = "error"
+            frappe.response["message_text"] = "Email and new password are required."
+            return
+
+        # Attempt to retrieve the user document
+        try:
+            user = frappe.get_doc("User", email)
+        except frappe.DoesNotExistError:
+            frappe.response["http_status_code"] = 404  # Not Found
+            frappe.response["status"] = "error"
+            frappe.response["message_text"] = "User not found."
+            return
+
+        # Update the user's password
+        user.new_password = new_password
+        user.save(ignore_permissions=True)
+
+        # Return a success response
+        frappe.response["http_status_code"] = 200  # OK
+        frappe.response["status"] = "success"
+        frappe.response["message_text"] = "Password reset successful."
+
+    except frappe.PermissionError:
+        frappe.response["http_status_code"] = 403  # Forbidden
+        frappe.response["status"] = "error"
+        frappe.response["message_text"] = "You do not have permission to reset the password."
+
+    except Exception as e:
+        frappe.log_error(message=str(e), title="Unexpected Error")
+        frappe.response["http_status_code"] = 500  # Internal Server Error
+        frappe.response["status"] = "error"
+        frappe.response["message_text"] = "An unexpected error occurred."
+
+
 
 @frappe.whitelist(allow_guest = True)
 def app_login(usr,pwd):
