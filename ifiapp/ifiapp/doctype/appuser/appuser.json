@@ -35,8 +35,7 @@
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
-   "label": "Name",
-   "unique": 1
+   "label": "Name"
   },
   {
    "fieldname": "points_gained",
@@ -139,7 +138,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-14 00:04:48.557933",
+ "modified": "2024-08-29 09:53:30.125623",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",
