@@ -13,6 +13,7 @@
   "district",
   "gender",
   "emp_status",
+  "company_name",
   "have_worked",
   "your_role",
   "column_break_txvg",
@@ -97,11 +98,18 @@
    "fieldname": "is_approved",
    "fieldtype": "Check",
    "label": "is Approved"
+  },
+  {
+   "depends_on": "eval:doc.emp_status == 'Employee'",
+   "fieldname": "company_name",
+   "fieldtype": "Select",
+   "label": "Company Name",
+   "options": "\nTata Elxsi\nThrough Tata Engage\nWipro\nOracle\nExperion\nCTS\nNuvento\nInfosys"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-08 00:34:42.628578",
+ "modified": "2024-09-19 00:37:32.364619",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "UserSignups",

@@ -32,9 +32,17 @@ def ping():
 
 #send mails for email verification
 def send_email(email_address,number_code):
-    frappe.sendmail(recipients=email_address,
+	message = f"""
+    Hello,
+    Your OTP for verifying your email is: {number_code}
+
+	 Please enter this code in your mobile app to complete your verification.
+    Thank you,
+    Insight for Innovation Team
+    """
+	frappe.sendmail(recipients=email_address,
 		subject="IFI Mail verification code",
-		message= number_code,
+		message= message,
 		delayed=False,
 		retry=1,)
 
