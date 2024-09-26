@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:college_name",
+ "creation": "2024-09-26 21:05:00.997778",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qjrq",
+  "college_name",
+  "district"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qjrq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "college_name",
+   "fieldtype": "Data",
+   "label": "College Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-26 23:04:46.990226",
+ "modified_by": "Administrator",
+ "module": "IFIApp",
+ "name": "College",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ifiuser",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "college_name"
+}

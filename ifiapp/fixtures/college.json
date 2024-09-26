@@ -1,0 +1,314 @@
+[
+ {
+  "college_name": "All Sain't College",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.278305",
+  "name": "All Sain't College"
+ },
+ {
+  "college_name": "NSS Neeramankara",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.285583",
+  "name": "NSS Neeramankara"
+ },
+ {
+  "college_name": "Christ Nagar College, Maranalloor",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.287755",
+  "name": "Christ Nagar College, Maranalloor"
+ },
+ {
+  "college_name": "Mar Ivanios College",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.289647",
+  "name": "Mar Ivanios College"
+ },
+ {
+  "college_name": "Christ College, Vizhijam",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.291309",
+  "name": "Christ College, Vizhijam"
+ },
+ {
+  "college_name": "Govt. College of Women, Thiruvananthapuram",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.292968",
+  "name": "Govt. College of Women, Thiruvananthapuram"
+ },
+ {
+  "college_name": "SN College, Chempazhanthy",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.294542",
+  "name": "SN College, Chempazhanthy"
+ },
+ {
+  "college_name": "University College, Thiruvananthapuram",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.296589",
+  "name": "University College, Thiruvananthapuram"
+ },
+ {
+  "college_name": "GEC, Bartonhill",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.298735",
+  "name": "GEC, Bartonhill"
+ },
+ {
+  "college_name": "SCT College of Engineering",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.300477",
+  "name": "SCT College of Engineering"
+ },
+ {
+  "college_name": "LBS Engineering College for Women",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.302124",
+  "name": "LBS Engineering College for Women"
+ },
+ {
+  "college_name": "Govt. College, Nedumangadu",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.303829",
+  "name": "Govt. College, Nedumangadu"
+ },
+ {
+  "college_name": "IISER",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.305625",
+  "name": "IISER"
+ },
+ {
+  "college_name": "CET",
+  "district": "Thiruvananthapuram",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.307737",
+  "name": "CET"
+ },
+ {
+  "college_name": "Govt Arts & Science College, Kozhikode",
+  "district": "Kozhikode",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.309790",
+  "name": "Govt Arts & Science College, Kozhikode"
+ },
+ {
+  "college_name": "Malabar Christian College",
+  "district": "Kozhikode",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.311673",
+  "name": "Malabar Christian College"
+ },
+ {
+  "college_name": "Providence Women's College",
+  "district": "Kozhikode",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.313449",
+  "name": "Providence Women's College"
+ },
+ {
+  "college_name": "NIT Calicut",
+  "district": "Kozhikode",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.315811",
+  "name": "NIT Calicut"
+ },
+ {
+  "college_name": "St. Joseph's College Devagiri",
+  "district": "Kozhikode",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.320002",
+  "name": "St. Joseph's College Devagiri"
+ },
+ {
+  "college_name": "Zamorin's Guruvayurappan College",
+  "district": "Kozhikode",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.321937",
+  "name": "Zamorin's Guruvayurappan College"
+ },
+ {
+  "college_name": "St Teresa's College",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.323669",
+  "name": "St Teresa's College"
+ },
+ {
+  "college_name": "Sacred Hearts Thevara",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.325385",
+  "name": "Sacred Hearts Thevara"
+ },
+ {
+  "college_name": "Rajagiri College of Engineering, Kakkanad",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.327121",
+  "name": "Rajagiri College of Engineering, Kakkanad"
+ },
+ {
+  "college_name": "SCMS School of Technology and Management",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.329132",
+  "name": "SCMS School of Technology and Management"
+ },
+ {
+  "college_name": "SCMS School of Engineering & Technology",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.331945",
+  "name": "SCMS School of Engineering & Technology"
+ },
+ {
+  "college_name": "De Paul Institute of Science & Technology",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.333701",
+  "name": "De Paul Institute of Science & Technology"
+ },
+ {
+  "college_name": "Adi Shankara Institute of Engineering & Technology Kalady",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.335284",
+  "name": "Adi Shankara Institute of Engineering & Technology Kalady"
+ },
+ {
+  "college_name": "Maharaja's College",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.336906",
+  "name": "Maharaja's College"
+ },
+ {
+  "college_name": "Cochin University of Science & Technology",
+  "district": "Ernakulam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.338560",
+  "name": "Cochin University of Science & Technology"
+ },
+ {
+  "college_name": "SN College, Alathur",
+  "district": "Palakkad",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.340352",
+  "name": "SN College, Alathur"
+ },
+ {
+  "college_name": "Govt. Victoria College",
+  "district": "Palakkad",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.342017",
+  "name": "Govt. Victoria College"
+ },
+ {
+  "college_name": "St Joseph's College, Irinjalakuda",
+  "district": "Thrissur",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.343692",
+  "name": "St Joseph's College, Irinjalakuda"
+ },
+ {
+  "college_name": "Fathima Matha College",
+  "district": "Kollam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.345909",
+  "name": "Fathima Matha College"
+ },
+ {
+  "college_name": "TKM Institute of Technology",
+  "district": "Kollam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.348682",
+  "name": "TKM Institute of Technology"
+ },
+ {
+  "college_name": "SN College",
+  "district": "Kollam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.350419",
+  "name": "SN College"
+ },
+ {
+  "college_name": "TKM College of Arts & Science",
+  "district": "Kollam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.352041",
+  "name": "TKM College of Arts & Science"
+ },
+ {
+  "college_name": "TKM College of Engineering",
+  "district": "Kollam",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.353552",
+  "name": "TKM College of Engineering"
+ },
+ {
+  "college_name": "Carmel College of Engineering & Technology",
+  "district": "Alappuzha",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.355410",
+  "name": "Carmel College of Engineering & Technology"
+ },
+ {
+  "college_name": "SD College",
+  "district": "Alappuzha",
+  "docstatus": 0,
+  "doctype": "College",
+  "modified": "2024-09-26 22:21:47.357734",
+  "name": "SD College"
+ }
+]
