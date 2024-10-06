@@ -8,7 +8,25 @@ import random
 
 
 class AppUser(Document):
-	pass
+    def before_save(self):
+        # Check if User Permission already exists for this user
+        existing_permissions = frappe.db.exists(
+            "User Permission", {"user": self.name, "allow": "Districts"}
+        )
+
+        if existing_permissions:
+            # Delete all existing User Permissions for this user related to Districts
+            frappe.db.delete("User Permission", {"user": self.name, "allow": "Districts"})
+
+        # Create new user permission for the current district
+        frappe.get_doc({
+            "doctype": "User Permission",
+            "user": self.name,
+            "allow": "Districts",
+            "for_value": self.district,  # Assuming `self.district` contains the district field
+            "is_default": 0,
+            "apply_to_all_doctypes": 1,
+        }).insert(ignore_permissions=True)
 
 # add approved user signup forms as appusers
 def add_as_appuser(doc, method):
@@ -28,15 +46,6 @@ def add_as_appuser(doc, method):
 			app_user.ifi_id = f"IFI-{random_number}"
 			app_user.insert(ignore_permissions=True)
 
-			# create user permission for those approved users in District list
-			frappe.get_doc(
-			doctype="User Permission",
-			user=doc.name,
-			allow="Districts",
-			for_value=doc.district,
-			is_default=0,
-			apply_to_all_doctypes=1,
-		).insert(ignore_permissions=True)
 
 
 # update the changes in User roles to appuser roles
