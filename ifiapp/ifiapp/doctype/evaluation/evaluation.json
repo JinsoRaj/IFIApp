@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{evaluator}-{volunteer}-{#####}",
+ "creation": "2024-11-26 23:19:20.863544",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "evaluation_details_section",
+  "volunteer",
+  "date",
+  "time",
+  "column_break_unex",
+  "evaluator",
+  "mode",
+  "questions_section",
+  "table_questions",
+  "final_score",
+  "feedback_section",
+  "feedback"
+ ],
+ "fields": [
+  {
+   "fieldname": "volunteer",
+   "fieldtype": "Link",
+   "label": "Volunteer",
+   "options": "AppUser"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "Online\nOffline"
+  },
+  {
+   "fieldname": "evaluator",
+   "fieldtype": "Link",
+   "label": "Evaluator",
+   "options": "AppUser"
+  },
+  {
+   "fieldname": "column_break_unex",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "evaluation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Evaluation Details"
+  },
+  {
+   "fieldname": "questions_section",
+   "fieldtype": "Section Break",
+   "label": "Questions"
+  },
+  {
+   "fieldname": "table_questions",
+   "fieldtype": "Table",
+   "label": "QuestionTable",
+   "options": "QuestionTable"
+  },
+  {
+   "fieldname": "feedback_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Text",
+   "label": "Feedback on performance"
+  },
+  {
+   "fieldname": "final_score",
+   "fieldtype": "Data",
+   "label": "Final score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-27 00:22:37.315008",
+ "modified_by": "Administrator",
+ "module": "IFIApp",
+ "name": "Evaluation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Volunteer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
