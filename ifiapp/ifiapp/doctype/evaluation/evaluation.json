@@ -1,17 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{evaluator}-{volunteer}-{#####}",
+ "autoname": "format:{ifi_id}--{evaluator_id}-{#####}",
  "creation": "2024-11-26 23:19:20.863544",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "evaluation_details_section",
+  "ifi_id",
   "volunteer",
   "date",
   "time",
   "column_break_unex",
   "evaluator",
+  "evaluator_id",
   "mode",
   "questions_section",
   "table_questions",
@@ -84,11 +86,21 @@
    "fieldname": "final_score",
    "fieldtype": "Data",
    "label": "Final score"
+  },
+  {
+   "fieldname": "ifi_id",
+   "fieldtype": "Data",
+   "label": "IFI ID"
+  },
+  {
+   "fieldname": "evaluator_id",
+   "fieldtype": "Data",
+   "label": "Evaluator ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-27 00:22:37.315008",
+ "modified": "2024-12-16 00:44:52.768682",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Evaluation",
