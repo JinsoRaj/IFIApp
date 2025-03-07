@@ -15,6 +15,7 @@
   "evaluator",
   "evaluator_id",
   "mode",
+  "type",
   "questions_section",
   "table_questions",
   "final_score",
@@ -96,11 +97,17 @@
    "fieldname": "evaluator_id",
    "fieldtype": "Data",
    "label": "Evaluator ID"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Evaluation\nTeachback"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-16 00:44:52.768682",
+ "modified": "2025-03-07 23:41:21.881508",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Evaluation",

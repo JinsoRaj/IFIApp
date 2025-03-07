@@ -9,7 +9,8 @@
  "field_order": [
   "section_break_qjrq",
   "college_name",
-  "district"
+  "district",
+  "mapped_schools"
  ],
  "fields": [
   {
@@ -26,11 +27,17 @@
    "fieldname": "district",
    "fieldtype": "Data",
    "label": "District"
+  },
+  {
+   "fieldname": "mapped_schools",
+   "fieldtype": "Table",
+   "label": "Mapped Schools",
+   "options": "MappedSchools"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-26 23:04:46.990226",
+ "modified": "2025-03-05 00:51:22.493801",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "College",

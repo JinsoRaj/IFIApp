@@ -18,19 +18,21 @@
   {
    "fieldname": "school_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "School Name",
    "unique": 1
   },
   {
    "fieldname": "district",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "District",
    "options": "Districts"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-16 22:58:01.718744",
+ "modified": "2025-03-07 23:36:29.494627",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "School",
@@ -48,37 +50,6 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Volunteer",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Coordinator",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Quality Assurance",
-   "share": 1
   }
  ],
  "sort_field": "modified",
