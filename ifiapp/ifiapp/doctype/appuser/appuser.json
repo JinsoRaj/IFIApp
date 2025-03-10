@@ -23,6 +23,9 @@
   "user_details",
   "emp_status",
   "res_address",
+  "college_name",
+  "school_section",
+  "schools",
   "students_list_section",
   "students_list"
  ],
@@ -134,11 +137,29 @@
    "fieldtype": "Select",
    "label": "Employment Status",
    "options": "Student\nEmployee\nUn-Employee"
+  },
+  {
+   "fieldname": "school_section",
+   "fieldtype": "Section Break",
+   "label": "School List"
+  },
+  {
+   "fieldname": "schools",
+   "fieldtype": "Table",
+   "label": "List of Schools",
+   "options": "MappedSchools"
+  },
+  {
+   "depends_on": "eval:doc.emp_status == 'Student'",
+   "fieldname": "college_name",
+   "fieldtype": "Link",
+   "label": "College Name",
+   "options": "College"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-29 09:53:30.125623",
+ "modified": "2025-03-10 16:43:30.167302",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",
