@@ -8,7 +8,16 @@
  "field_order": [
   "section_break_sdmu",
   "school_name",
-  "district"
+  "place",
+  "column_break_akcb",
+  "district",
+  "state",
+  "section_break_hnqg",
+  "principal_name",
+  "contact_number",
+  "column_break_sylm",
+  "teacher_in_charge",
+  "teacher_contact_number"
  ],
  "fields": [
   {
@@ -28,11 +37,53 @@
    "in_list_view": 1,
    "label": "District",
    "options": "Districts"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "principal_name",
+   "fieldtype": "Data",
+   "label": "Principal Name"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "teacher_in_charge",
+   "fieldtype": "Data",
+   "label": "Teacher in Charge"
+  },
+  {
+   "fieldname": "teacher_contact_number",
+   "fieldtype": "Data",
+   "label": "Teacher Contact Number"
+  },
+  {
+   "fieldname": "column_break_akcb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hnqg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sylm",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-07 23:36:29.494627",
+ "modified": "2025-03-10 11:27:06.722182",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "School",
