@@ -17,6 +17,7 @@
   "evaluator_id",
   "mode",
   "type",
+  "full_name",
   "questions_section",
   "table_questions",
   "final_score",
@@ -109,11 +110,16 @@
    "fieldname": "profile_pic",
    "fieldtype": "Data",
    "label": "profile pic"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "full name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-24 14:49:35.297000",
+ "modified": "2025-03-24 14:56:47.366329",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Evaluation",

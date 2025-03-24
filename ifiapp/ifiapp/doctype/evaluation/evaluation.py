@@ -9,8 +9,10 @@ class Evaluation(Document):
 	def before_save(self):
 		ifi_id = self.ifi_id
 		app_user = frappe.db.get_value("AppUser", {"ifi_id": ifi_id},"name")
+		app_user_name = frappe.db.get_value("AppUser", {"ifi_id": ifi_id},"full_name")
 		app_user_profile = frappe.db.get_value("AppUser", {"ifi_id": ifi_id},"profile_pic")
 		self.volunteer = app_user
+		self.full_name = app_user_name
 		self.profile_pic = app_user_profile
 		if self.volunteer == None:
 			frappe.throw("No such volunteer IFI ID")
