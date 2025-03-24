@@ -11,6 +11,7 @@
   "volunteer",
   "date",
   "time",
+  "profile_pic",
   "column_break_unex",
   "evaluator",
   "evaluator_id",
@@ -103,11 +104,16 @@
    "fieldtype": "Select",
    "label": "Type",
    "options": "Evaluation\nTeachback"
+  },
+  {
+   "fieldname": "profile_pic",
+   "fieldtype": "Data",
+   "label": "profile pic"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-07 23:41:21.881508",
+ "modified": "2025-03-24 14:49:35.297000",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Evaluation",
