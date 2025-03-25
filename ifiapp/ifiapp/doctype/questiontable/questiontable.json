@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "question",
+  "question_text",
   "mark"
  ],
  "fields": [
@@ -21,12 +22,19 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Mark"
+  },
+  {
+   "fetch_from": "question.question",
+   "fieldname": "question_text",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question Text"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-02 19:50:27.566027",
+ "modified": "2025-03-25 16:48:56.672238",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "QuestionTable",
