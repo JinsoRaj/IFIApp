@@ -83,7 +83,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-10 11:27:06.722182",
+ "modified": "2025-04-01 14:31:32.717242",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "School",
@@ -101,6 +101,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ifiuser",
+   "share": 1
   }
  ],
  "sort_field": "modified",
