@@ -83,7 +83,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-01 14:31:32.717242",
+ "modified": "2025-04-03 00:14:04.233294",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "School",
@@ -114,5 +114,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "school_name"
 }

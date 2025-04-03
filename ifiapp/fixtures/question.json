@@ -66,6 +66,14 @@
  {
   "docstatus": 0,
   "doctype": "Question",
+  "modified": "2024-11-26 23:57:14.958815",
+  "name": "11",
+  "qnnumber": "11",
+  "question": "Adequate Speed of Teaching"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Question",
   "modified": "2024-11-26 23:56:46.588072",
   "name": "9",
   "qnnumber": "9",
@@ -78,13 +86,5 @@
   "name": "10",
   "qnnumber": "10",
   "question": "Adequate Clarity of Teaching"
- },
- {
-  "docstatus": 0,
-  "doctype": "Question",
-  "modified": "2024-11-26 23:57:14.958815",
-  "name": "11",
-  "qnnumber": "11",
-  "question": "Adequate Speed of Teaching"
  }
 ]

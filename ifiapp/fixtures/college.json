@@ -1,314 +1,607 @@
 [
  {
   "college_name": "All Sain't College",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.278305",
-  "name": "All Sain't College"
+  "name": "All Sain't College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "NSS Neeramankara",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.285583",
-  "name": "NSS Neeramankara"
+  "name": "NSS Neeramankara",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Christ Nagar College, Maranalloor",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.287755",
-  "name": "Christ Nagar College, Maranalloor"
+  "name": "Christ Nagar College, Maranalloor",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Mar Ivanios College",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.289647",
-  "name": "Mar Ivanios College"
+  "name": "Mar Ivanios College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Christ College, Vizhijam",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.291309",
-  "name": "Christ College, Vizhijam"
+  "name": "Christ College, Vizhijam",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Govt. College of Women, Thiruvananthapuram",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.292968",
-  "name": "Govt. College of Women, Thiruvananthapuram"
+  "name": "Govt. College of Women, Thiruvananthapuram",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "SN College, Chempazhanthy",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.294542",
-  "name": "SN College, Chempazhanthy"
+  "name": "SN College, Chempazhanthy",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "University College, Thiruvananthapuram",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.296589",
-  "name": "University College, Thiruvananthapuram"
+  "name": "University College, Thiruvananthapuram",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "GEC, Bartonhill",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.298735",
-  "name": "GEC, Bartonhill"
+  "name": "GEC, Bartonhill",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "SCT College of Engineering",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.300477",
-  "name": "SCT College of Engineering"
+  "name": "SCT College of Engineering",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "LBS Engineering College for Women",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.302124",
-  "name": "LBS Engineering College for Women"
+  "name": "LBS Engineering College for Women",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Govt. College, Nedumangadu",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.303829",
-  "name": "Govt. College, Nedumangadu"
+  "name": "Govt. College, Nedumangadu",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "IISER",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.305625",
-  "name": "IISER"
+  "name": "IISER",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "CET",
+  "contact_number": null,
   "district": "Thiruvananthapuram",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.307737",
-  "name": "CET"
+  "name": "CET",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Govt Arts & Science College, Kozhikode",
+  "contact_number": null,
   "district": "Kozhikode",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.309790",
-  "name": "Govt Arts & Science College, Kozhikode"
+  "name": "Govt Arts & Science College, Kozhikode",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Malabar Christian College",
+  "contact_number": null,
   "district": "Kozhikode",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.311673",
-  "name": "Malabar Christian College"
+  "name": "Malabar Christian College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Providence Women's College",
+  "contact_number": null,
   "district": "Kozhikode",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.313449",
-  "name": "Providence Women's College"
+  "name": "Providence Women's College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "NIT Calicut",
+  "contact_number": null,
   "district": "Kozhikode",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.315811",
-  "name": "NIT Calicut"
+  "name": "NIT Calicut",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "St. Joseph's College Devagiri",
+  "contact_number": null,
   "district": "Kozhikode",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.320002",
-  "name": "St. Joseph's College Devagiri"
+  "name": "St. Joseph's College Devagiri",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Zamorin's Guruvayurappan College",
+  "contact_number": null,
   "district": "Kozhikode",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.321937",
-  "name": "Zamorin's Guruvayurappan College"
+  "name": "Zamorin's Guruvayurappan College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "St Teresa's College",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.323669",
-  "name": "St Teresa's College"
+  "name": "St Teresa's College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Sacred Hearts Thevara",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.325385",
-  "name": "Sacred Hearts Thevara"
+  "name": "Sacred Hearts Thevara",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Rajagiri College of Engineering, Kakkanad",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.327121",
-  "name": "Rajagiri College of Engineering, Kakkanad"
+  "name": "Rajagiri College of Engineering, Kakkanad",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "SCMS School of Technology and Management",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.329132",
-  "name": "SCMS School of Technology and Management"
+  "name": "SCMS School of Technology and Management",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "SCMS School of Engineering & Technology",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.331945",
-  "name": "SCMS School of Engineering & Technology"
+  "name": "SCMS School of Engineering & Technology",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "De Paul Institute of Science & Technology",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.333701",
-  "name": "De Paul Institute of Science & Technology"
+  "name": "De Paul Institute of Science & Technology",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Adi Shankara Institute of Engineering & Technology Kalady",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
-  "modified": "2024-09-26 22:21:47.335284",
-  "name": "Adi Shankara Institute of Engineering & Technology Kalady"
+  "mapped_schools": [
+   {
+    "parent": "Adi Shankara Institute of Engineering & Technology Kalady",
+    "parentfield": "mapped_schools",
+    "parenttype": "College",
+    "schools": "LMN Kollam"
+   },
+   {
+    "parent": "Adi Shankara Institute of Engineering & Technology Kalady",
+    "parentfield": "mapped_schools",
+    "parenttype": "College",
+    "schools": "XYZ Ernakulam"
+   }
+  ],
+  "modified": "2025-04-03 00:19:40.070243",
+  "name": "Adi Shankara Institute of Engineering & Technology Kalady",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Maharaja's College",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.336906",
-  "name": "Maharaja's College"
+  "name": "Maharaja's College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Cochin University of Science & Technology",
+  "contact_number": null,
   "district": "Ernakulam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.338560",
-  "name": "Cochin University of Science & Technology"
+  "name": "Cochin University of Science & Technology",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "SN College, Alathur",
+  "contact_number": null,
   "district": "Palakkad",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.340352",
-  "name": "SN College, Alathur"
+  "name": "SN College, Alathur",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Govt. Victoria College",
+  "contact_number": null,
   "district": "Palakkad",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.342017",
-  "name": "Govt. Victoria College"
+  "name": "Govt. Victoria College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "St Joseph's College, Irinjalakuda",
+  "contact_number": null,
   "district": "Thrissur",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.343692",
-  "name": "St Joseph's College, Irinjalakuda"
+  "name": "St Joseph's College, Irinjalakuda",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Fathima Matha College",
+  "contact_number": null,
   "district": "Kollam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.345909",
-  "name": "Fathima Matha College"
+  "name": "Fathima Matha College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "TKM Institute of Technology",
+  "contact_number": null,
   "district": "Kollam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.348682",
-  "name": "TKM Institute of Technology"
+  "name": "TKM Institute of Technology",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "SN College",
+  "contact_number": null,
   "district": "Kollam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.350419",
-  "name": "SN College"
+  "name": "SN College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "TKM College of Arts & Science",
+  "contact_number": null,
   "district": "Kollam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.352041",
-  "name": "TKM College of Arts & Science"
+  "name": "TKM College of Arts & Science",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "TKM College of Engineering",
+  "contact_number": null,
   "district": "Kollam",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.353552",
-  "name": "TKM College of Engineering"
+  "name": "TKM College of Engineering",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "Carmel College of Engineering & Technology",
+  "contact_number": null,
   "district": "Alappuzha",
   "docstatus": 0,
   "doctype": "College",
+  "mapped_schools": [],
   "modified": "2024-09-26 22:21:47.355410",
-  "name": "Carmel College of Engineering & Technology"
+  "name": "Carmel College of Engineering & Technology",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  },
  {
   "college_name": "SD College",
+  "contact_number": null,
   "district": "Alappuzha",
   "docstatus": 0,
   "doctype": "College",
-  "modified": "2024-09-26 22:21:47.357734",
-  "name": "SD College"
+  "mapped_schools": [
+   {
+    "parent": "SD College",
+    "parentfield": "mapped_schools",
+    "parenttype": "College",
+    "schools": "XYZ Ernakulam"
+   }
+  ],
+  "modified": "2025-04-03 00:18:39.386448",
+  "name": "SD College",
+  "place": null,
+  "principal_name": null,
+  "state": null,
+  "teacher_contact_number": null,
+  "teacher_in_charge": null
  }
 ]
