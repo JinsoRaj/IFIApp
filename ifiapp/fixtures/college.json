@@ -1,5 +1,6 @@
 [
  {
+  "college_coordinator": null,
   "college_name": "All Sain't College",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -15,6 +16,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "NSS Neeramankara",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -30,6 +32,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Christ Nagar College, Maranalloor",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -45,6 +48,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Mar Ivanios College",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -60,6 +64,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Christ College, Vizhijam",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -75,6 +80,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Govt. College of Women, Thiruvananthapuram",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -90,6 +96,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "SN College, Chempazhanthy",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -105,6 +112,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "University College, Thiruvananthapuram",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -120,6 +128,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "GEC, Bartonhill",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -135,6 +144,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "SCT College of Engineering",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -150,6 +160,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "LBS Engineering College for Women",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -165,6 +176,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Govt. College, Nedumangadu",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -180,6 +192,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "IISER",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -195,6 +208,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "CET",
   "contact_number": null,
   "district": "Thiruvananthapuram",
@@ -210,6 +224,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Govt Arts & Science College, Kozhikode",
   "contact_number": null,
   "district": "Kozhikode",
@@ -225,6 +240,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Malabar Christian College",
   "contact_number": null,
   "district": "Kozhikode",
@@ -240,6 +256,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Providence Women's College",
   "contact_number": null,
   "district": "Kozhikode",
@@ -255,6 +272,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "NIT Calicut",
   "contact_number": null,
   "district": "Kozhikode",
@@ -270,6 +288,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "St. Joseph's College Devagiri",
   "contact_number": null,
   "district": "Kozhikode",
@@ -285,6 +304,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Zamorin's Guruvayurappan College",
   "contact_number": null,
   "district": "Kozhikode",
@@ -300,6 +320,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "St Teresa's College",
   "contact_number": null,
   "district": "Ernakulam",
@@ -315,6 +336,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Sacred Hearts Thevara",
   "contact_number": null,
   "district": "Ernakulam",
@@ -330,6 +352,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Rajagiri College of Engineering, Kakkanad",
   "contact_number": null,
   "district": "Ernakulam",
@@ -345,6 +368,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "SCMS School of Technology and Management",
   "contact_number": null,
   "district": "Ernakulam",
@@ -360,6 +384,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "SCMS School of Engineering & Technology",
   "contact_number": null,
   "district": "Ernakulam",
@@ -375,6 +400,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "De Paul Institute of Science & Technology",
   "contact_number": null,
   "district": "Ernakulam",
@@ -390,6 +416,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Adi Shankara Institute of Engineering & Technology Kalady",
   "contact_number": null,
   "district": "Ernakulam",
@@ -418,6 +445,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Maharaja's College",
   "contact_number": null,
   "district": "Ernakulam",
@@ -433,6 +461,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Cochin University of Science & Technology",
   "contact_number": null,
   "district": "Ernakulam",
@@ -448,6 +477,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "SN College, Alathur",
   "contact_number": null,
   "district": "Palakkad",
@@ -463,6 +493,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Govt. Victoria College",
   "contact_number": null,
   "district": "Palakkad",
@@ -478,6 +509,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "St Joseph's College, Irinjalakuda",
   "contact_number": null,
   "district": "Thrissur",
@@ -493,6 +525,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Fathima Matha College",
   "contact_number": null,
   "district": "Kollam",
@@ -508,6 +541,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "TKM Institute of Technology",
   "contact_number": null,
   "district": "Kollam",
@@ -523,12 +557,20 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "SN College",
   "contact_number": null,
   "district": "Kollam",
   "docstatus": 0,
   "doctype": "College",
-  "mapped_schools": [],
+  "mapped_schools": [
+   {
+    "parent": "SN College",
+    "parentfield": "mapped_schools",
+    "parenttype": "College",
+    "schools": "ZOVI Ernakulam"
+   }
+  ],
   "modified": "2024-09-26 22:21:47.350419",
   "name": "SN College",
   "place": null,
@@ -538,6 +580,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "TKM College of Arts & Science",
   "contact_number": null,
   "district": "Kollam",
@@ -553,6 +596,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "TKM College of Engineering",
   "contact_number": null,
   "district": "Kollam",
@@ -568,6 +612,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "Carmel College of Engineering & Technology",
   "contact_number": null,
   "district": "Alappuzha",
@@ -583,6 +628,7 @@
   "teacher_in_charge": null
  },
  {
+  "college_coordinator": null,
   "college_name": "SD College",
   "contact_number": null,
   "district": "Alappuzha",

@@ -16,6 +16,7 @@
   "section_break_ialf",
   "principal_name",
   "contact_number",
+  "college_coordinator",
   "column_break_vefr",
   "teacher_in_charge",
   "teacher_contact_number",
@@ -89,11 +90,18 @@
   {
    "fieldname": "section_break_hgvh",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "college_coordinator",
+   "fieldtype": "Link",
+   "label": "College Coordinator",
+   "link_filters": "[[\"AppUser\",\"is_coordinator\",\"=\",1]]",
+   "options": "AppUser"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-10 11:33:20.800196",
+ "modified": "2025-04-04 15:56:23.233132",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "College",

@@ -15,6 +15,7 @@
   "section_break_hnqg",
   "principal_name",
   "contact_number",
+  "school_coordinator",
   "column_break_sylm",
   "teacher_in_charge",
   "teacher_contact_number"
@@ -79,11 +80,18 @@
   {
    "fieldname": "column_break_sylm",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "school_coordinator",
+   "fieldtype": "Link",
+   "label": "School Coordinator",
+   "link_filters": "[[\"AppUser\",\"is_coordinator\",\"=\",1]]",
+   "options": "AppUser"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-03 00:14:04.233294",
+ "modified": "2025-04-04 15:59:07.399318",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "School",
