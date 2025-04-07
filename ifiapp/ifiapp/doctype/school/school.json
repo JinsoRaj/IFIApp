@@ -91,7 +91,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-04 15:59:07.399318",
+ "modified": "2025-04-07 16:25:29.134607",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "School",
@@ -118,6 +118,30 @@
    "report": 1,
    "role": "ifiuser",
    "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "District Coordinator",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
