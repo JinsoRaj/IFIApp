@@ -3,8 +3,8 @@
   "docstatus": 0,
   "doctype": "Energy Point Settings",
   "enabled": 1,
-  "last_point_allocation_date": "2025-04-07",
-  "modified": "2025-04-07 16:25:26.983201",
+  "last_point_allocation_date": "2025-05-15",
+  "modified": "2025-05-15 13:22:44.675913",
   "name": "Energy Point Settings",
   "point_allocation_periodicity": "Daily",
   "review_levels": []

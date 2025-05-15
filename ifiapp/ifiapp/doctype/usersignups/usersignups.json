@@ -103,9 +103,9 @@
   {
    "depends_on": "eval:doc.emp_status == 'Employee'",
    "fieldname": "company_name",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Company Name",
-   "options": "\nTata Elxsi\nThrough Tata Engage\nWipro\nOracle\nExperion\nCTS\nNuvento\nInfosys"
+   "options": "Corporate"
   },
   {
    "depends_on": "eval:doc.emp_status == 'Student'",
@@ -117,7 +117,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-26 23:15:02.509615",
+ "modified": "2025-05-15 14:00:06.896087",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "UserSignups",
