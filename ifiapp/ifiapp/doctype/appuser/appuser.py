@@ -28,6 +28,30 @@ class AppUser(Document):
             "apply_to_all_doctypes": 1,
         }).insert(ignore_permissions=True)
 
+
+    #validation starts - last change
+    def validate(self):
+        # Add this new validation method
+        self.validate_duplicate_schools()
+    
+    def validate_duplicate_schools(self):
+        """Validate that there are no duplicate schools in the schools table"""
+        if not self.get("schools"):
+            return
+            
+        seen_schools = set()
+        
+        for school in self.schools:
+            if school.schools in seen_schools:
+                frappe.throw(
+                    _(f"School '{school.schools}' is already mapped to this user. Please remove the duplicate entry."),
+                    title=_("Duplicate School")
+                )
+            seen_schools.add(school.schools)
+
+# Rest of your existing code remains exactly the same... validation change ends
+
+
 # add approved user signup forms as appusers
 def add_as_appuser(doc, method):
 	if doc.workflow_state == "Approved":
