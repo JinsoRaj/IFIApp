@@ -6,7 +6,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "name1",
+  "in_charge",
+  "contact_number",
+  "coordinator",
+  "column_break_nrxl",
+  "district",
+  "place",
+  "state"
  ],
  "fields": [
   {
@@ -14,11 +21,47 @@
    "fieldtype": "Data",
    "label": "Name",
    "unique": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "in_charge",
+   "fieldtype": "Data",
+   "label": "in Charge"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "coordinator",
+   "fieldtype": "Link",
+   "label": "Coordinator",
+   "link_filters": "[[\"AppUser\",\"is_coordinator\",\"=\",1]]",
+   "options": "AppUser"
+  },
+  {
+   "fieldname": "column_break_nrxl",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-15 13:52:40.531251",
+ "modified": "2025-06-18 23:19:46.034319",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Corporate",
