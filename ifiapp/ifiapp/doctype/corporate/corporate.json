@@ -1,12 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
+ "autoname": "field:corporate_name",
  "creation": "2025-05-15 13:51:52.649732",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "corporate_name",
   "in_charge",
   "contact_number",
   "coordinator",
@@ -16,12 +16,6 @@
   "state"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "unique": 1
-  },
   {
    "fieldname": "district",
    "fieldtype": "Data",
@@ -57,11 +51,17 @@
   {
    "fieldname": "column_break_nrxl",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "corporate_name",
+   "fieldtype": "Data",
+   "label": "Corporate Name",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-18 23:19:46.034319",
+ "modified": "2025-06-19 10:44:15.273615",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "Corporate",
@@ -76,7 +76,19 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "ifiuser",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "District Coordinator",
    "share": 1,
    "write": 1
   }
