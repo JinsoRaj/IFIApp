@@ -79,7 +79,7 @@ def add_roles_in_appuser(doc, method):
 		if frappe.db.exists("AppUser", doc.name):
 			app_user = frappe.get_doc("AppUser", doc.name)
 			user_doc_roles = frappe.get_roles(doc.name)
-			app_user.is_volunteer = app_user.is_coordinator = app_user.is_qa = 0
+			app_user.is_volunteer = app_user.is_coordinator = app_user.is_qa = app_user.is_dis_coordinator = 0
 
 			for role in user_doc_roles:
 				if role == "Volunteer":
@@ -88,6 +88,8 @@ def add_roles_in_appuser(doc, method):
 					app_user.is_coordinator = 1
 				elif role == "Quality Assurance":
 					app_user.is_qa = 1
+				elif role == "District Coordinator":
+					app_user.is_dis_coordinator = 1
 			app_user.flags.ignore_permissions = True
 			app_user.save()
 

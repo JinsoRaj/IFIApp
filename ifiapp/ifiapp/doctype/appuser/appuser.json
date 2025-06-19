@@ -16,6 +16,7 @@
   "is_volunteer",
   "is_coordinator",
   "is_qa",
+  "is_dis_coordinator",
   "roles_info_text",
   "column_break_7exv",
   "state",
@@ -155,11 +156,18 @@
    "fieldtype": "Link",
    "label": "College Name",
    "options": "College"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_dis_coordinator",
+   "fieldtype": "Check",
+   "label": "is District Coordinator",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-10 16:43:30.167302",
+ "modified": "2025-06-19 23:30:00.852329",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",
