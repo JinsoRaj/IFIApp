@@ -2,6 +2,15 @@
  {
   "docstatus": 0,
   "doctype": "IFIModule",
+  "max_marks": null,
+  "modified": "2025-07-14 00:03:21.804392",
+  "module_id": 3,
+  "module_name": "Other",
+  "name": "3"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "IFIModule",
   "max_marks": "25",
   "modified": "2024-08-14 01:31:12.771148",
   "module_id": 1,
