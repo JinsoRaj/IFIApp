@@ -219,7 +219,7 @@ fixtures = ["Topic", "IFIModule","Energy Point Settings","Energy Point Rule","St
   'dt': 'Role Profile', 'filters': {'name': ('in', ('ifi'))},
   'dt': 'Workflow', 'filters': {'name': ('in', ('UserApproval'))},
   'dt': 'Workflow State', 'filters': {'name': ('in', ('Draft', 'Approval Pending'))},
-  'dt': 'Class', 'filters': {'name': ('in', ('6', '7', '8', '9', '10'))}
+  'dt': 'Class', 'filters': {'name': ('in', ('4', '5', '6', '7', '8', '9', '10'))}
 }]
 
 
