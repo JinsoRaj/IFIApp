@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"7wySOf3Hco\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">IFI</span>\",\"col\":12}},{\"id\":\"eApqzGM2pm\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"qgb1wnVp1Y\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"SignUp applications\",\"col\":6}},{\"id\":\"uXDnJRCPCD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Approved Users\",\"col\":6}},{\"id\":\"NWQuHRvpVx\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0qFeVxjB0V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Volunteers\",\"col\":4}},{\"id\":\"pcaxGuxTu7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Co Ordinators\",\"col\":4}},{\"id\":\"Zs-jkMhz1i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"QAs\",\"col\":4}},{\"id\":\"mu2eJrjqqF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sX58S8aemV\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sessions List\",\"col\":4}},{\"id\":\"yaQ7456zY2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Students List\",\"col\":3}},{\"id\":\"EknSXcM58s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance List\",\"col\":3}},{\"id\":\"wWaHeG2n9k\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O4tNR8_usc\",\"type\":\"card\",\"data\":{\"card_name\":\"Curriculum\",\"col\":4}},{\"id\":\"c8ZVJHBg1y\",\"type\":\"card\",\"data\":{\"card_name\":\"Locations\",\"col\":4}}]",
+ "content": "[{\"id\":\"7wySOf3Hco\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">IFI</span>\",\"col\":12}},{\"id\":\"eApqzGM2pm\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"qgb1wnVp1Y\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"SignUp applications\",\"col\":6}},{\"id\":\"uXDnJRCPCD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Approved Users\",\"col\":6}},{\"id\":\"NWQuHRvpVx\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0qFeVxjB0V\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Volunteers\",\"col\":3}},{\"id\":\"Zs-jkMhz1i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"QAs\",\"col\":3}},{\"id\":\"pcaxGuxTu7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Co Ordinators\",\"col\":3}},{\"id\":\"fFD39tg7qQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District Coordinators\",\"col\":3}},{\"id\":\"mu2eJrjqqF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sX58S8aemV\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sessions List\",\"col\":4}},{\"id\":\"yaQ7456zY2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Students List\",\"col\":3}},{\"id\":\"EknSXcM58s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance List\",\"col\":3}},{\"id\":\"wWaHeG2n9k\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"O4tNR8_usc\",\"type\":\"card\",\"data\":{\"card_name\":\"Curriculum\",\"col\":4}},{\"id\":\"c8ZVJHBg1y\",\"type\":\"card\",\"data\":{\"card_name\":\"Locations\",\"col\":4}}]",
  "creation": "2024-06-18 23:11:22.859052",
  "custom_blocks": [],
  "docstatus": 0,
@@ -83,7 +83,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-07-28 17:39:28.976651",
+ "modified": "2025-07-22 15:08:07.291927",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "IFI",
@@ -117,6 +117,14 @@
    "label": "Volunteers",
    "link_to": "AppUser",
    "stats_filter": "[[\"AppUser\",\"is_volunteer\",\"=\",1,false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "District Coordinators",
+   "link_to": "AppUser",
+   "stats_filter": "[[\"AppUser\",\"is_dis_coordinator\",\"=\",1,false]]",
    "type": "DocType"
   },
   {
