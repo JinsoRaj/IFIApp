@@ -45,7 +45,7 @@
    "fieldname": "modules_covered",
    "fieldtype": "Select",
    "label": "Modules Covered",
-   "options": "Maths\nEnglish"
+   "options": "Maths\nEnglish\nOther"
   },
   {
    "fieldname": "remarks",
@@ -64,7 +64,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-27 00:19:43.135051",
+ "modified": "2025-07-22 14:48:47.556276",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "ClassSession",
