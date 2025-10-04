@@ -8,25 +8,25 @@ import random
 
 
 class AppUser(Document):
-    def before_save(self):
+    # def before_save(self):
         # Check if User Permission already exists for this user
-        existing_permissions = frappe.db.exists(
-            "User Permission", {"user": self.name, "allow": "Districts"}
-        )
+        # existing_permissions = frappe.db.exists(
+        #     "User Permission", {"user": self.name, "allow": "Districts"}
+        # )
 
-        if existing_permissions:
-            # Delete all existing User Permissions for this user related to Districts
-            frappe.db.delete("User Permission", {"user": self.name, "allow": "Districts"})
+        # if existing_permissions:
+        #     # Delete all existing User Permissions for this user related to Districts
+        #     frappe.db.delete("User Permission", {"user": self.name, "allow": "Districts"})
 
         # Create new user permission for the current district
-        frappe.get_doc({
-            "doctype": "User Permission",
-            "user": self.name,
-            "allow": "Districts",
-            "for_value": self.district,  # Assuming `self.district` contains the district field
-            "is_default": 0,
-            "apply_to_all_doctypes": 1,
-        }).insert(ignore_permissions=True)
+        # frappe.get_doc({
+        #     "doctype": "User Permission",
+        #     "user": self.name,
+        #     "allow": "Districts",
+        #     "for_value": self.district,  # Assuming `self.district` contains the district field
+        #     "is_default": 0,
+        #     "apply_to_all_doctypes": 1,
+        # }).insert(ignore_permissions=True)
 
 
     #validation starts - last change
