@@ -111,16 +111,25 @@ def manage_student(**kwargs):
         # Extract the HTTP method
         method = frappe.local.request.method
 
-        # Extract the skills array from kwargs
+        # Define all available skill fields
+        all_skill_fields = [
+            "visual_spatial", "linguistic_verbal", "interpersonal",
+            "intrapersonal", "logical_mathematical", "musical",
+            "bodily_kinesthetic", "naturalistic"
+        ]
+
+        # Extract the skills array from kwargs (now expecting simple array of skill names)
         skills = kwargs.get('skills', [])
 
         # Prepare a dictionary to hold the skill fields
         student_data = {}
 
-        # Parse the skills array into individual fields
-        for skill in skills:
-            for key, value in skill.items():
-                student_data[key] = value
+        # Set skills passed in the array to 1, rest to 0
+        for skill_field in all_skill_fields:
+            if skill_field in skills:
+                student_data[skill_field] = 1
+            else:
+                student_data[skill_field] = 0
 
         if method == 'POST':
             # Create a new Student document
@@ -136,14 +145,10 @@ def manage_student(**kwargs):
             response_data = new_student.as_dict()
 
             # Extract the skills fields and create the skills array
-            skills_array = [field for field in response_data if response_data.get(field) == 1 and field in [
-                "visual_spatial", "linguistic_verbal", "interpersonal", 
-                "intrapersonal", "logical_mathematical", "musical", 
-                "bodily_kinesthetic", "naturalistic"
-            ]]
+            skills_array = [field for field in response_data if response_data.get(field) == 1 and field in all_skill_fields]
 
             # Remove the individual skill fields from the main response
-            for skill in skills_array:
+            for skill in all_skill_fields:
                 response_data.pop(skill, None)
 
             # Add the skills array to the response data
@@ -178,14 +183,10 @@ def manage_student(**kwargs):
             response_data = student_doc.as_dict()
 
             # Extract the skills fields and create the skills array
-            skills_array = [field for field in response_data if response_data.get(field) == 1 and field in [
-                "visual_spatial", "linguistic_verbal", "interpersonal", 
-                "intrapersonal", "logical_mathematical", "musical", 
-                "bodily_kinesthetic", "naturalistic"
-            ]]
+            skills_array = [field for field in response_data if response_data.get(field) == 1 and field in all_skill_fields]
 
             # Remove the individual skill fields from the main response
-            for skill in skills_array:
+            for skill in all_skill_fields:
                 response_data.pop(skill, None)
 
             # Add the skills array to the response data
