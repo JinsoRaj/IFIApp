@@ -215,7 +215,7 @@ app_license = "MIT"
 # ]
 
 fixtures = ["Topic", "IFIModule","Energy Point Settings","Energy Point Rule","States","Districts","College","Question","Role", "Corporate",{
-  'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','District Coordinator','Quality Assurance','ifiuser'))},
+  'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','District Coordinator','Quality Assurance','ifiuser', 'ifiadmin'))},
   'dt': 'Role Profile', 'filters': {'name': ('in', ('ifi'))},
   'dt': 'Workflow', 'filters': {'name': ('in', ('UserApproval'))},
   'dt': 'Workflow State', 'filters': {'name': ('in', ('Draft', 'Approval Pending'))},

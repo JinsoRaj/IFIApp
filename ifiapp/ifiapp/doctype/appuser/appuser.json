@@ -8,6 +8,7 @@
  "field_order": [
   "section_break_95kj",
   "ifi_id",
+  "email_id",
   "profile_pic",
   "full_name",
   "ph_number",
@@ -163,11 +164,17 @@
    "fieldtype": "Check",
    "label": "is District Coordinator",
    "read_only": 1
+  },
+  {
+   "fetch_from": "user_details.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email id"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-19 23:30:00.852329",
+ "modified": "2025-11-06 10:57:19.323267",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",

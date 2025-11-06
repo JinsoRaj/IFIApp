@@ -37,6 +37,7 @@
    "fieldname": "email_id",
    "fieldtype": "Data",
    "label": "Email Id",
+   "options": "Email",
    "unique": 1
   },
   {
@@ -117,7 +118,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-15 14:00:06.896087",
+ "modified": "2025-11-06 10:39:50.740851",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "UserSignups",
