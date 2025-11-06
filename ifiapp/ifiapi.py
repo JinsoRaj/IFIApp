@@ -205,7 +205,15 @@ def send_otp_code(email):
 	pass
 
 @frappe.whitelist(allow_guest=True)
-def verify_otp_code(email, number_code):
+def verify_otp_code(email, number_code, purpose="general"):
+	"""
+	Verify OTP and optionally generate a single-use token for password reset.
+
+	Args:
+		email: User's email
+		number_code: OTP code to verify
+		purpose: "general" for signup/other uses, "password_reset" to generate reset token
+	"""
 	user = frappe.get_doc("User", email)
 	user.flags.ignore_permissions = True
 	stored_code = user.reset_password_key
@@ -213,63 +221,101 @@ def verify_otp_code(email, number_code):
 	reset_password_link_expiry = cint(
 				frappe.get_system_settings("reset_password_link_expiry_duration")
 			)
-	
+
 	#expired when - now_datetime() > last_reset_password_key_generated_on + timedelta(seconds=reset_password_link_expiry)
 	#if not expired - then match usercode with stored key, if same enable the user and save.
 	if now_datetime() < last_reset_password_key_generated_on + timedelta(seconds=reset_password_link_expiry):
-		
-		if number_code == stored_code:
 
-			frappe.response["http_status_code"] = 200 
+		if number_code == stored_code:
+			# If this is for password reset, generate a single-use token and store in cache
+			reset_token = None
+			if purpose == "password_reset":
+				import secrets
+				reset_token = secrets.token_urlsafe(32)
+				# Store token in cache with 10 minute expiry
+				cache_key = f"password_reset_token:{email}"
+				frappe.cache().set_value(cache_key, reset_token, expires_in_sec=600)
+
+			frappe.response["http_status_code"] = 200
 			frappe.response["status"] = "success"
 			frappe.response["message_text"] = "OTP Verified"
+			if reset_token:
+				frappe.response["reset_token"] = reset_token
 			return
 	#user.reset_password_key = number_code
 	#user.last_name = "nys"
-	 
+
 	#key = user.reset_password_key
-	frappe.response["http_status_code"] = 400 
+	frappe.response["http_status_code"] = 400
 	frappe.response["status"] = "error"
 	frappe.response["message_text"] = "Wrong verification code"
 	return
 
-#unsafe - redo this.
 @frappe.whitelist(allow_guest=True)
-def reset_password(email, new_password):
+def reset_password(email, new_password, reset_token):
+    """
+    Reset password using a single-use token obtained from OTP verification.
+    Token is stored in cache and deleted after use.
+
+    Args:
+        email: User's email
+        new_password: New password to set
+        reset_token: Single-use token from verify_otp_code with purpose="password_reset"
+    """
     try:
-        # Validate email and password
-        if not email or not new_password:
-            frappe.response["http_status_code"] = 400  # Bad Request
+        # Validate inputs
+        if not email or not new_password or not reset_token:
+            frappe.response["http_status_code"] = 400
             frappe.response["status"] = "error"
-            frappe.response["message_text"] = "Email and new password are required."
+            frappe.response["message_text"] = "Email, new password, and reset token are required."
             return
 
-        # Attempt to retrieve the user document
+        # Get user document
         try:
             user = frappe.get_doc("User", email)
         except frappe.DoesNotExistError:
-            frappe.response["http_status_code"] = 404  # Not Found
+            frappe.response["http_status_code"] = 404
             frappe.response["status"] = "error"
             frappe.response["message_text"] = "User not found."
             return
 
-        # Update the user's password
+        # Verify reset token from cache
+        cache_key = f"password_reset_token:{email}"
+        stored_token = frappe.cache().get_value(cache_key)
+
+        if not stored_token:
+            frappe.response["http_status_code"] = 400
+            frappe.response["status"] = "error"
+            frappe.response["message_text"] = "Invalid or expired reset token. Please request a new OTP."
+            return
+
+        # Check token match
+        if stored_token != reset_token:
+            frappe.response["http_status_code"] = 400
+            frappe.response["status"] = "error"
+            frappe.response["message_text"] = "Invalid reset token."
+            return
+
+        # Update password and delete token from cache (single-use)
         user.new_password = new_password
         user.save(ignore_permissions=True)
+        frappe.db.commit()
 
-        # Return a success response
-        frappe.response["http_status_code"] = 200  # OK
+        # Delete the token to ensure single-use
+        frappe.cache().delete_value(cache_key)
+
+        frappe.response["http_status_code"] = 200
         frappe.response["status"] = "success"
         frappe.response["message_text"] = "Password reset successful."
 
     except frappe.PermissionError:
-        frappe.response["http_status_code"] = 403  # Forbidden
+        frappe.response["http_status_code"] = 403
         frappe.response["status"] = "error"
         frappe.response["message_text"] = "You do not have permission to reset the password."
 
     except Exception as e:
-        frappe.log_error(message=str(e), title="Unexpected Error")
-        frappe.response["http_status_code"] = 500  # Internal Server Error
+        frappe.log_error(message=str(e), title="Password Reset Error")
+        frappe.response["http_status_code"] = 500
         frappe.response["status"] = "error"
         frappe.response["message_text"] = "An unexpected error occurred."
 
