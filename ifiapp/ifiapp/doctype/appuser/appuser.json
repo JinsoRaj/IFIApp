@@ -169,12 +169,13 @@
    "fetch_from": "user_details.email_id",
    "fieldname": "email_id",
    "fieldtype": "Data",
-   "label": "Email id"
+   "label": "Email id",
+   "options": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-06 10:57:19.323267",
+ "modified": "2025-11-06 11:23:46.674000",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "AppUser",
