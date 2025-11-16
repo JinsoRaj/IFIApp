@@ -8,13 +8,14 @@ import math
 
 
 class ClassSession(Document):
-	def before_save(self):
-		if self.session_start_time and self.session_end_time:
-			start = get_datetime(self.session_start_time)
-			end = get_datetime(self.session_end_time)
+   pass
+	# def before_save(self):
+	# 	if self.session_start_time and self.session_end_time:
+	# 		start = get_datetime(self.session_start_time)
+	# 		end = get_datetime(self.session_end_time)
 
-			# Calculate difference in hours
-			time_diff = (end - start).total_seconds() / 3600
+	# 		# Calculate difference in hours
+	# 		time_diff = (end - start).total_seconds() / 3600
 
-			# Round up to nearest integer, minimum 1
-			self.session_total_time = max(1, math.ceil(time_diff))
+	# 		# Round up to nearest integer, minimum 1
+	# 		self.session_total_time = max(1, math.ceil(time_diff))
