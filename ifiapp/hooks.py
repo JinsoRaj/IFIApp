@@ -214,12 +214,13 @@ app_license = "MIT"
 # 	"ifiapp.auth.validate"
 # ]
 
-fixtures = ["Topic", "IFIModule","Energy Point Settings","Energy Point Rule","States","Districts","College","Question","Role", "Corporate",{
+fixtures = ["Topic", "IFIModule","Energy Point Settings","Energy Point Rule","States","Districts","College","Question","Role", "Corporate", "Server Script",{
   'dt': 'Role', 'filters': {'name': ('in', ('Volunteer','Coordinator','District Coordinator','Quality Assurance','ifiuser', 'ifiadmin'))},
   'dt': 'Role Profile', 'filters': {'name': ('in', ('ifi'))},
   'dt': 'Workflow', 'filters': {'name': ('in', ('UserApproval'))},
   'dt': 'Workflow State', 'filters': {'name': ('in', ('Draft', 'Approval Pending'))},
-  'dt': 'Class', 'filters': {'name': ('in', ('4', '5', '6', '7', '8', '9', '10'))}
+  'dt': 'Class', 'filters': {'name': ('in', ('4', '5', '6', '7', '8', '9', '10'))},
+  'dt': "Custom DocPerm"
 }]
 
 

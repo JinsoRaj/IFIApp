@@ -10,6 +10,7 @@
   "ifi_id",
   "session_start_time",
   "session_end_time",
+  "session_total_time",
   "remarks",
   "attendance_notes",
   "column_break_mkum",
@@ -60,11 +61,16 @@
   {
    "fieldname": "column_break_mkum",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "session_total_time",
+   "fieldtype": "Data",
+   "label": "Session Total Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-22 14:48:47.556276",
+ "modified": "2025-11-16 12:55:35.172296",
  "modified_by": "Administrator",
  "module": "IFIApp",
  "name": "ClassSession",

@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "After Save",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2025-11-16 12:53:30.578769",
+  "module": null,
+  "name": "Notify school assignment",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "AppUser",
+  "script": "# Server Script Configuration:\n# Script Type: DocType Event\n# Reference Document Type: AppUser\n# DocType Event: After Save\n\ndef notify_school_assignment(doc, method=None):\n    \"\"\"\n    Detects when new schools are added to AppUser and creates notification log\n    which triggers FCM push notification to mobile app\n    \"\"\"\n    \n    # Skip for new documents\n    if doc.is_new():\n        return\n    \n    # Get the document before save to compare\n    old_doc = doc.get_doc_before_save()\n    if not old_doc:\n        return\n    \n    # Get user's email for notification\n    user_email = doc.email_id or doc.user_details\n    if not user_email:\n        frappe.log_error(f\"No email found for AppUser: {doc.name}\", \"School Assignment Notification\")\n        return\n    \n    # Extract school names from old and new documents\n    old_schools = {row.schools for row in old_doc.get('schools', []) if row.schools}\n    new_schools = {row.schools for row in doc.get('schools', []) if row.schools}\n    \n    # Find newly added schools\n    added_schools = new_schools - old_schools\n    \n    if added_schools:\n        school_list = \", \".join(sorted(added_schools))\n        \n        # Create Notification Log (this triggers FCM via your existing server script)\n        try:\n            notification_log = frappe.get_doc({\n                'doctype': 'Notification Log',\n                'subject': f'New School(s) Assigned to You',\n                'email_content': f'''<p>Hello {doc.full_name or 'User'},</p>\n            <p>You have been assigned to the following school(s):</p>\n            <ul>\n            {''.join([f'<li>{school}</li>' for school in sorted(added_schools)])}\n            </ul>\n            <p>Please check your app for more details.</p>''',\n                'for_user': user_email,\n                'type': 'Alert',\n                'document_type': doc.doctype,\n                'document_name': doc.name,\n                'from_user': frappe.session.user\n            })\n            \n            notification_log.insert(ignore_permissions=True)\n            \n            # Optional: Send email as well\n            frappe.sendmail(\n                recipients=[user_email],\n                subject=f'New School(s) Assigned - {doc.full_name}',\n                message=f'''\n                    <p>Hello {doc.full_name},</p>\n                    <p>You have been assigned to: <strong>{school_list}</strong></p>\n                    <p>Total schools assigned: {len(new_schools)}</p>\n                '''\n            )\n            \n            frappe.msgprint(f'Notification sent to {doc.full_name} for {len(added_schools)} new school(s)')\n            \n        except Exception as e:\n            frappe.log_error(str(e), \"School Assignment Notification Error\")\n            frappe.msgprint(f'Error sending notification: {str(e)}', indicator='red')\n\n# Execute the function\nnotify_school_assignment(doc)",
+  "script_type": "DocType Event"
+ }
+]
